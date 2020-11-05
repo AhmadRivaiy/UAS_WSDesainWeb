@@ -22,7 +22,11 @@ i18n
       formatSeparator: ','
     },
     react: {
-        useSuspense: false
+      wait: true,
+      useSuspense: false,
+      transEmptyNodeValue: '',
+      transSupportBasicHtmlNodes: true,
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
     }
   })
 

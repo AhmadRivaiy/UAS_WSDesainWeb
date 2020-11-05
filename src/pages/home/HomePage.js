@@ -27,6 +27,8 @@ import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
 import { userService } from '../../services/user.service';
 import { apiGetContentHome } from '../../components';
+import { withTranslation } from 'react-i18next';
+import axios from 'axios'
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -54,7 +56,32 @@ class HomePage extends React.Component {
     } catch (error) {
       console.log(error)
     }
+    this.getCurrentUser()
   }
+
+  async getCurrentUser() {
+    try{
+        await axios({
+            method: 'post',
+            url: 'http://192.168.100.199:6855/getUserLogin',
+            headers: {
+                'Authorization': 'token=' + 'as'
+            },
+            data: {
+              "user_type":2,
+              "user_id":"27f0e276-0cba-4843-93c0-8c8edf542e6a"
+          }
+        }).then(auth => {
+            localStorage.setItem('currentUser', JSON.stringify(auth));
+        })
+        .catch(error => {
+            this.setState({ timingLoad: 10 })
+        })
+    }catch(err){
+        console.log(err)
+    }
+
+}
 
   componentWillUnmount() {
     Events.scrollEvent.remove('begin');
@@ -63,6 +90,7 @@ class HomePage extends React.Component {
 
   render() {
     const { data_home } = this.state;
+    const { t } = this.props;
     return (
       <>
         <MDBView
@@ -157,7 +185,7 @@ class HomePage extends React.Component {
             <div className="col d-flex justify-content-center">
               <Link activeClass="active" to="moreWelcome" offset={-50} spy={true} smooth={true} duration={1200} >
                 <MDBBtn color='primary' className="align-self-center">
-                  More About Welcome <span><i className="fas fa-chevron-down cs_pointer ml-1"></i></span>
+                {t('more_about.btn.label')} <span><i className="fas fa-chevron-down cs_pointer ml-1"></i></span>
                 </MDBBtn>
               </Link>
             </div>
@@ -201,7 +229,7 @@ class HomePage extends React.Component {
                             <MDBCardBody>
                               <MDBCardTitle>
                                 <p style={{ fontSize: '1em' }}>
-                                  “Education is not the filling of a pail, but the lighting of a fire.”
+                                  “{t('quotes.card.home')}”
                                 </p>
                                 </MDBCardTitle>
                             </MDBCardBody>
@@ -221,6 +249,13 @@ class HomePage extends React.Component {
                   <MDBCol md="8">
                     <img src="https://tikomdik.jabarprov.go.id/static/media/1.fb4fbd61.jpg" width="100%" height="auto"></img>
                   </MDBCol>
+                  <MDBCol>
+                    <MDBTypography tag="p" style={{ fontFamily: 'MerriweatherSans-Light' }}>
+                      <div dangerouslySetInnerHTML={
+                          {__html: t('desk.home.paragraph', {interpolation: {escapeValue: false}})}
+                      } />
+                    </MDBTypography>
+                  </MDBCol>
                 </MDBRow>
               </MDBCol>
             </MDBRow>
@@ -231,4 +266,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default withTranslation()(HomePage);

@@ -63,6 +63,9 @@ import InputGroupPage from './pages/InputGroupPage';
 import TreeviewPage from './pages/TreeviewPage';
 import RatingPage from './pages/RatingPage';
 
+import LoginPage from './pages/account/LoginPage';
+import RegisterPage from './pages/account/RegisterPage';
+
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -136,6 +139,8 @@ class Routes extends React.Component {
         <Route path='/tables/datatable' component={DatatablePage} />
         <Route path='/tables/datatable-2' component={DatatablePageV5} />
         
+        <Route path='/login' component={LoginPage} />
+        <Route path='/register' component={RegisterPage} />
         <Route
           render={function() {
             return <h1>Not Found</h1>;

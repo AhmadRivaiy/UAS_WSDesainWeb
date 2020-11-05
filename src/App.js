@@ -30,11 +30,19 @@ class App extends Component {
     id: false
   };
 
-  async componentDidMount(){
+  componentDidMount(){
+    this.navLanguage()
+  }
+
+  async navLanguage(){
     try {
       var data = await JSON.parse(localStorage.getItem('is_lang_now'));
       if(data){
-        this.setState({ [data.index]: true})
+        if(data.index === 'en'){
+          this.setState({ [data.index]: true, id: false})
+        }else{
+          this.setState({ [data.index]: true, en: false})
+        }
         i18n.changeLanguage(data.index);
       }else{
         console.log('null')
@@ -64,9 +72,16 @@ class App extends Component {
       index: index,
       param: params
     }
+    const notReload = {
+      "/login": true
+    }
     localStorage.setItem('is_lang_now', JSON.stringify(data));
     i18n.changeLanguage(index);
-    window.location.reload()
+    const locationNow = window.location.pathname;
+    if(!notReload[locationNow]){
+      window.location.reload()
+    }
+    this.navLanguage();
   }
   
   render() {
@@ -213,7 +228,7 @@ class App extends Component {
                 </MDBCollapse>
               </MDBNavbar>
               {collapseID && overlay}
-              <main style={{ marginTop: '4rem' }}>
+              <main style={{ marginTop: '2rem'  }}>
                 <Routes />
               </main>
               <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#2d2e2f' }}>

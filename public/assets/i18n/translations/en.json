@@ -7,5 +7,12 @@
     "academic.nav.label": "Academic",
     "about.nav.label": "About",
     "our_partner.nav.label": "Our Partner",
-    "account.nav.label": "Account"
+    "account.nav.label": "Account",
+
+    "account.form.label":"SIGN IN",
+
+    "more_about.btn.label": "MORE ABOUT TIKOMDIK",
+    "quotes.card.home":"Education is not the filling of a pail, but the lighting of a fire.",
+
+    "desk.home.paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit tellus a ex sollicitudin, interdum tempus leo gravida. Phasellus dapibus a ante eu convallis. Maecenas aliquam enim in massa facilisis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut libero ultricies, blandit arcu vitae, iaculis urna. Donec mattis vel turpis et molestie. Aliquam dapibus justo quam, ut consectetur turpis cursus consectetur. Aenean a pellentesque purus, quis mattis risus. Nulla facilisi. Etiam vitae felis vel neque vestibulum posuere. Nulla facilisi. Curabitur tincidunt fermentum ornare. Curabitur quis ex vel sem venenatis interdum at et diam. Sed sed lectus felis. <br/><br/>Sed vel nisi ac dui tempor pulvinar. Aenean pharetra sit amet magna vel maximus. Integer ut tellus nisl. Suspendisse in odio urna. Nullam tincidunt placerat bibendum. Mauris sit amet aliquet magna. Vestibulum blandit mattis rhoncus. Pellentesque interdum laoreet lacus, vel lobortis nibh suscipit at. Nam venenatis vitae nunc sed malesuada. Praesent eleifend efficitur dignissim. Sed posuere diam mauris, sit amet rutrum turpis pellentesque id. Nam eu consectetur ex, at fermentum tortor."
 }
