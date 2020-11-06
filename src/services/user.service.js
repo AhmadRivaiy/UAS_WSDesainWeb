@@ -17,7 +17,7 @@ function getData(apiGet) {
         })
         .catch(error => {
             if (!error.response) {
-                swal("Terjadi Kesalahan pada Server", "Please check your internet connection.", "warning");
+                swal("Terjadi Kesalahan Saat Mengambil Data", "We Currently Fixing This Issue", "warning");
                 //console.log("Please check your internet connection.");
             }
     
@@ -34,7 +34,7 @@ function postData(apiPost, dataPost) {
         })
         .catch(error => {
             if (!error.response) {
-                swal("Terjadi Kesalahan", "Please check your internet connection.", "warning");
+                swal("Terjadi Kesalahan", "We Currently Fixing This Issue", "warning");
                 //console.log("Please check your internet connection.");
             }
     

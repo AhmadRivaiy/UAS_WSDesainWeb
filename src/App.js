@@ -17,7 +17,9 @@ import {
   MDBDropdownItem,
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-//import logoTikom from './assets/logo_tikomdik_white.png';
+import {ThemeProvider} from "styled-components";
+import { GlobalStyles } from "./components/GlobalStyles";
+import { lightTheme, darkTheme } from "./components/Themes"
 import Routes from './Routes';
 import i18n from "i18next";
 import { withTranslation } from 'react-i18next';
@@ -27,7 +29,8 @@ class App extends Component {
     collapseID: '',
     sidebarOpen: false,
     en: false,
-    id: false
+    id: false,
+    darkMode: false
   };
 
   componentDidMount(){
@@ -93,10 +96,14 @@ class App extends Component {
       />
     );
 
-    const { collapseID, sidebarOpen, en, id } = this.state;
+    const { collapseID, sidebarOpen, en, id, darkMode } = this.state;
     const { t } = this.props;
+    const theme = 'dark';
 
     return (
+      <ThemeProvider theme={!darkMode ? lightTheme : darkTheme}>
+      <>
+      <GlobalStyles/>
       <Router>
             <div className='flyout'>
           {/* <Sidebar
@@ -200,16 +207,6 @@ class App extends Component {
                       </MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to={false}
-                      >
-                          <strong className="d-flex d-none d-lg-block">
-                            <MDBIcon icon="grip-lines-vertical" />
-                          </strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
                           <strong>
                             <MDBDropdown>
                               <MDBDropdownToggle caret nav={true}>
@@ -223,6 +220,11 @@ class App extends Component {
                               </MDBDropdownMenu>
                             </MDBDropdown>
                           </strong>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                    <div>
+                      <input checked={!darkMode} type="checkbox" name="checkbox" className="switch" onChange={() => this.setState({ darkMode: !darkMode })}/>
+                    </div>
                     </MDBNavItem>
                   </MDBNavbarNav>
                 </MDBCollapse>
@@ -341,6 +343,8 @@ class App extends Component {
         {/* </Sidebar> */}
             </div>
       </Router>
+      </>
+    </ThemeProvider>
     );
   }
 }

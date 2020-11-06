@@ -5,8 +5,8 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "./index.css";
 import App from "./App";
-import './i18n';
 import registerServiceWorker from './registerServiceWorker';
+import './i18n';
 
 ReactDOM.render( <App /> , document.getElementById('root'));
 

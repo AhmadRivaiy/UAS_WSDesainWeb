@@ -70,6 +70,11 @@ function getErr(data) {
                     this.setState({ email_err: x.msg, color: '#d93025', invalid: false })
                 )
             }
+            default : {
+                return (
+                    null
+                )
+            }
         }
     });
 }

@@ -28,7 +28,6 @@ import { Link, Element, Events } from 'react-scroll'
 import { userService } from '../../services/user.service';
 import { apiGetContentHome } from '../../components';
 import { withTranslation } from 'react-i18next';
-import axios from 'axios'
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -56,32 +55,7 @@ class HomePage extends React.Component {
     } catch (error) {
       console.log(error)
     }
-    this.getCurrentUser()
   }
-
-  async getCurrentUser() {
-    try{
-        await axios({
-            method: 'post',
-            url: 'http://192.168.100.199:6855/getUserLogin',
-            headers: {
-                'Authorization': 'token=' + 'as'
-            },
-            data: {
-              "user_type":2,
-              "user_id":"27f0e276-0cba-4843-93c0-8c8edf542e6a"
-          }
-        }).then(auth => {
-            localStorage.setItem('currentUser', JSON.stringify(auth));
-        })
-        .catch(error => {
-            this.setState({ timingLoad: 10 })
-        })
-    }catch(err){
-        console.log(err)
-    }
-
-}
 
   componentWillUnmount() {
     Events.scrollEvent.remove('begin');
@@ -228,7 +202,7 @@ class HomePage extends React.Component {
                           >
                             <MDBCardBody>
                               <MDBCardTitle>
-                                <p style={{ fontSize: '1em' }}>
+                                <p style={{ fontSize: '1em', color: 'black'}}>
                                   “{t('quotes.card.home')}”
                                 </p>
                                 </MDBCardTitle>
@@ -238,25 +212,34 @@ class HomePage extends React.Component {
                       </MDBFreeBird>
                     </MDBCol>
                     <hr className='my-5' />
-                    {data_home.map((x, key) => {
+                    {data_home && data_home.map((x, key) => {
                       return(
-                        <MDBTypography key={key} tag="p" style={{ fontFamily: 'MerriweatherSans-Light' }}>
-                          {x.desk}
-                        </MDBTypography>
+                        <div key={key}>
+                          {
+                            key === 0 ? 
+                              <p style={{ fontWeight: 'bold', fontFamily: 'MerriweatherSans-Light' }}>
+                                {x.desk}
+                              </p>
+                            :
+                              <p style={{ fontFamily: 'MerriweatherSans-Light' }}>
+                                {x.desk}
+                              </p>
+                          }
+                        </div>
                       )
                     })}
                   </MDBCol>
                   <MDBCol md="8">
-                    <img src="https://tikomdik.jabarprov.go.id/static/media/1.fb4fbd61.jpg" width="100%" height="auto"></img>
+                    <img src="https://tikomdik.jabarprov.go.id/static/media/1.fb4fbd61.jpg" width="100%" height="auto" alt="UPTD TIKOMDIK"/>
                   </MDBCol>
                   <MDBCol>
-                    <MDBTypography tag="p" style={{ fontFamily: 'MerriweatherSans-Light' }}>
-                      <div dangerouslySetInnerHTML={
-                          {__html: t('desk.home.paragraph', {interpolation: {escapeValue: false}})}
-                      } />
-                    </MDBTypography>
+                      <p dangerouslySetInnerHTML={
+                          {__html: t('desk.home.paragraph')}
+                      } style={{ fontFamily: 'MerriweatherSans-Light' }} />
                   </MDBCol>
                 </MDBRow>
+                
+                <hr className='my-5' />
               </MDBCol>
             </MDBRow>
           </MDBContainer>
