@@ -122,7 +122,7 @@ class App extends Component {
                 />
                 <MDBNavbarBrand href='/' className='py-0' style={{flex: 1}} >
                   {/* <img src={logoTikom} style={{ height: 'auto', width: '8.5rem', alignSelf: 'center', alignItems: 'center' }} alt="Logo UPTD Tikomdik" /> */}
-                  <h6 className="text-center" style={{ alignItems: 'center', margin: '0.1em' }}>UPTD TIKomDik<br/>Jawa Barat</h6>
+                  <h6 className="text-center" style={{ alignItems: 'center', margin: '0.1em' }}>Tes Aja</h6>
                 </MDBNavbarBrand>
                 <MDBCollapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
                   <MDBNavbarNav right>

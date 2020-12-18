@@ -22,7 +22,9 @@ import {
   MDBTypography
 } from 'mdbreact';
 import './HomePage.css';
+import videoBg from '../../assets/video/Mt_Baker.mp4';
 import imgHendra from '../../assets/unnamed.jpg';
+import imgLogo from '../../assets/logo.png';
 import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
 import { userService } from '../../services/user.service';
@@ -42,19 +44,19 @@ class HomePage extends React.Component {
   async componentDidMount() {
     Events.scrollEvent.register('begin');
     Events.scrollEvent.register('end');
-    try {
-      await userService.getData(apiGetContentHome + this.state.is_lang)
-      .then(
-        user => {
-          this.setState({ data_home: user.data.data })
-        },
-        error => {
-          console.log(error)
-        }
-      )
-    } catch (error) {
-      console.log(error)
-    }
+    // try {
+    //   await userService.getData(apiGetContentHome + this.state.is_lang)
+    //   .then(
+    //     user => {
+    //       this.setState({ data_home: user.data.data })
+    //     },
+    //     error => {
+    //       console.log(error)
+    //     }
+    //   )
+    // } catch (error) {
+    //   console.log(error)
+    // }
   }
 
   componentWillUnmount() {
@@ -120,51 +122,45 @@ class HomePage extends React.Component {
             </MDBCarouselItem>
           </MDBCarouselInner>
         </MDBCarousel>
-        <MDBEdgeHeader color='grey darken-3' className='sectionPage d-none d-lg-block' />
-        <div className="d-none d-lg-block" style={{ backgroundColor: 'grey' }}>
-          <div className="row" style={{ padding: '5%', marginRight: '1%' }}>
+        {/* <MDBEdgeHeader color='grey darken-3' className='sectionPage d-none d-lg-block' /> */}
+        <video className="videoBg d-none d-lg-block" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src={videoBg} type="video/mp4"/>
+        </video>
+        <div className="d-none d-lg-block" style={{ paddingLeft: '5%',  paddingRight: '5%',  paddingBottom: '2%', marginRight: '1%' , backgroundColor: 'grey' }}>
+          <div className="row">
             <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
               <div className="d-flex flex-column">
-                <h1 style={{ fontWeight: 'bold', color: 'white', fontSize: '4em', fontFamily: 'Poppins-ExtraBold' }}>UPTD TIKomDik Jawa Barat</h1>
-                <h1 style={{ color: 'white', fontFamily: 'Poppins-Light' }}>Empowers To Educate</h1>
-                <hr style={{ borderWidth: 5 }} />
-                <h1 style={{ fontWeight: 'bold', color: 'white', textAlign: 'start', fontFamily: 'Poppins-Medium' }}>
-                  | <Typed
-                    strings={[
-                      'Creative',
-                      'Innovative',
-                      'Collaborative']}
-                    typeSpeed={40}
-                    backSpeed={70}
-                    startDelay={80}
-                    showCursor={false}
-                    loop>
-                  </Typed>
-                </h1>
+                <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, margin: '50px' }} className="img-fluid align-self-center" alt=""/>
+                <h1 style={{ color: 'white', fontFamily: 'Poppins-Light', textAlign: 'center' }}>Empowers To Educate</h1>
+                <div className="d-flex justify-content-center" style={{ height: '350px' }}>
+                  <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Poppins-Medium', fontSize: '4em'}}>
+                    <Typed
+                      strings={[
+                        'Creative',
+                        'Innovative',
+                        'Collaborative']}
+                      typeSpeed={40}
+                      backSpeed={70}
+                      startDelay={80}
+                      showCursor={false}
+                      loop>
+                    </Typed>
+                  </h1>
+                </div>
               </div>
             </div>
-            <div className="col z-depth-3 py-0 px-0">
-              <MDBAnimation reveal type='fadeIn'>
-                <video className='video-fluid d-block' autoPlay muted loop>
-                  <source
-                    src='https://mdbootstrap.com/img/video/Tropical.mp4'
-                    type='video/mp4'
-                    style={{ width: '100%' }}
-                  />
-                </video>
-              </MDBAnimation>
-            </div>
           </div>
-          <div className="row" style={{ margin: '5%', paddingBottom: '5%' }}>
+          <div className="row" style={{paddingBottom: '5%' }}>
             <div className="col d-flex justify-content-center">
               <Link activeClass="active" to="moreWelcome" offset={-50} spy={true} smooth={true} duration={1200} >
-                <MDBBtn color='primary' className="align-self-center">
+                <MDBBtn color="indigo" className="align-self-center z-depth-3" style={{ textTransform: 'capitalize'}}>
                 {t('more_about.btn.label')} <span><i className="fas fa-chevron-down cs_pointer ml-1"></i></span>
                 </MDBBtn>
               </Link>
             </div>
           </div>
-          <Element name="moreWelcome" className="element" >
+        </div>
+        <Element name="moreWelcome" className="element" >
             <div className="row justify-content-md-center" style={{ margin: '0.01%' }}>
               <div className="col col-lg-5 colSeparatorHome d-flex justify-content-center flex-column">
                 <h2 className="subTitleSeparator align-self-center">"Everybody Get Up and Sleep Again"</h2>
@@ -183,7 +179,6 @@ class HomePage extends React.Component {
               </div>
             </div>
           </Element>
-        </div>
         <div className='mt-3 mb-5'>
           <MDBContainer>
             <MDBRow>
@@ -212,7 +207,7 @@ class HomePage extends React.Component {
                       </MDBFreeBird>
                     </MDBCol>
                     <hr className='my-5' />
-                    {data_home && data_home.map((x, key) => {
+                    {/* {data_home && data_home.map((x, key) => {
                       return(
                         <div key={key}>
                           {
@@ -227,7 +222,7 @@ class HomePage extends React.Component {
                           }
                         </div>
                       )
-                    })}
+                    })} */}
                   </MDBCol>
                   <MDBCol md="8">
                     <img src="https://tikomdik.jabarprov.go.id/static/media/1.fb4fbd61.jpg" width="100%" height="auto" alt="UPTD TIKOMDIK"/>
