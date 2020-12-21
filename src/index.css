@@ -3,12 +3,6 @@
 	flex-direction: column;
 	min-height:100vh;
 	justify-content: space-between;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.flyout::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
 }
 
 .home-feature-box .fa {

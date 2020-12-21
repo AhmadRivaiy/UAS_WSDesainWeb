@@ -39,6 +39,15 @@ a.border.nav-link.border-light.rounded.mr-1:hover {
   filter: opacity(.1);
 }
 
+.patternBG{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #38567C;
+}
+
 .videoBg {
   content: '';
   position: absolute;

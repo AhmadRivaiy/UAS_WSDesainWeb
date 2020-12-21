@@ -17,7 +17,7 @@ import {
   MDBDropdownItem,
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import {ThemeProvider} from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/Themes"
 import Routes from './Routes';
@@ -33,25 +33,25 @@ class App extends Component {
     darkMode: false
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.navLanguage()
   }
 
-  async navLanguage(){
+  async navLanguage() {
     try {
       var data = await JSON.parse(localStorage.getItem('is_lang_now'));
-      if(data){
-        if(data.index === 'en'){
-          this.setState({ [data.index]: true, id: false})
-        }else{
-          this.setState({ [data.index]: true, en: false})
+      if (data) {
+        if (data.index === 'en') {
+          this.setState({ [data.index]: true, id: false })
+        } else {
+          this.setState({ [data.index]: true, en: false })
         }
         i18n.changeLanguage(data.index);
-      }else{
+      } else {
         console.log('null')
       }
     } catch (error) {
-      
+
     }
   }
 
@@ -70,7 +70,7 @@ class App extends Component {
     this.setState({ sidebarOpen: open });
   }
 
-  chooseLanguage(index, params){
+  chooseLanguage(index, params) {
     var data = {
       index: index,
       param: params
@@ -81,12 +81,12 @@ class App extends Component {
     localStorage.setItem('is_lang_now', JSON.stringify(data));
     i18n.changeLanguage(index);
     const locationNow = window.location.pathname;
-    if(!notReload[locationNow]){
+    if (!notReload[locationNow]) {
       window.location.reload()
     }
     this.navLanguage();
   }
-  
+
   render() {
     const overlay = (
       <div
@@ -102,28 +102,24 @@ class App extends Component {
 
     return (
       <ThemeProvider theme={!darkMode ? lightTheme : darkTheme}>
-      <>
-      <GlobalStyles/>
-      <Router>
+        <>
+          <GlobalStyles />
+          <Router>
             <div className='flyout'>
-          {/* <Sidebar
+              {/* <Sidebar
             sidebar={<b>Sidebar content</b>}
             open={sidebarOpen}
             onSetOpen={() => this.onSetSidebarOpen(!sidebarOpen)}
             touch={true}
             styles={{ sidebar: { background: "white" } }}
           > */}
-              <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
+              <MDBNavbar dark expand='md' fixed='top' scrolling color='#4C6789' style={{ maxHeight: 43, backgroundColor: '#4C6789' }}>
                 <MDBNavbarToggler
                   onClick={this.toggleCollapse('mainNavbarCollapse')}
                   //onClick={() => this.setState({ sidebarOpen: !sidebarOpen })}
                   right={true}
                   image="https://www.iconfinder.com/data/icons/basic-ui-27/64/Artboard_18-512.png"
                 />
-                <MDBNavbarBrand href='/' className='py-0' style={{flex: 1}} >
-                  {/* <img src={logoTikom} style={{ height: 'auto', width: '8.5rem', alignSelf: 'center', alignItems: 'center' }} alt="Logo UPTD Tikomdik" /> */}
-                  <h6 className="text-center" style={{ alignItems: 'center', margin: '0.1em' }}>Tes Aja</h6>
-                </MDBNavbarBrand>
                 <MDBCollapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
                   <MDBNavbarNav right>
                     <MDBNavItem className="d-block d-md-none">
@@ -133,7 +129,7 @@ class App extends Component {
                         <br />
                       </MDBView>
                     </MDBNavItem>
-                    <MDBNavItem>
+                    {/* <MDBNavItem>
                       <MDBNavLink
                         exact
                         to='/'
@@ -189,7 +185,7 @@ class App extends Component {
                       >
                         <strong>{t('about.nav.label')}</strong>
                       </MDBNavLink>
-                    </MDBNavItem>
+                    </MDBNavItem> */}
                     <MDBNavItem>
                       <MDBNavLink
                         onClick={this.closeCollapse('mainNavbarCollapse')}
@@ -207,30 +203,30 @@ class App extends Component {
                       </MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem>
-                          <strong>
-                            <MDBDropdown>
-                              <MDBDropdownToggle caret nav={true}>
-                                <MDBIcon icon="language" size="1x"/>
-                              </MDBDropdownToggle>
-                              <MDBDropdownMenu basic>
-                                <MDBDropdownItem header>Language</MDBDropdownItem>
-                                <MDBDropdownItem divider />
-                                <MDBDropdownItem active={id} onClick={() => this.chooseLanguage('id', '0')}>Indonesia</MDBDropdownItem>
-                                <MDBDropdownItem active={en} onClick={() => this.chooseLanguage('en', '1')}>English</MDBDropdownItem>
-                              </MDBDropdownMenu>
-                            </MDBDropdown>
-                          </strong>
+                      <strong>
+                        <MDBDropdown>
+                          <MDBDropdownToggle caret nav={true}>
+                            <MDBIcon icon="language" size="1x" />
+                          </MDBDropdownToggle>
+                          <MDBDropdownMenu basic>
+                            <MDBDropdownItem header>Language</MDBDropdownItem>
+                            <MDBDropdownItem divider />
+                            <MDBDropdownItem active={id} onClick={() => this.chooseLanguage('id', '0')}>Indonesia</MDBDropdownItem>
+                            <MDBDropdownItem active={en} onClick={() => this.chooseLanguage('en', '1')}>English</MDBDropdownItem>
+                          </MDBDropdownMenu>
+                        </MDBDropdown>
+                      </strong>
                     </MDBNavItem>
                     <MDBNavItem>
-                    <div>
-                      <input checked={!darkMode} type="checkbox" name="checkbox" className="switch" onChange={() => this.setState({ darkMode: !darkMode })}/>
-                    </div>
+                      <div>
+                        <input checked={!darkMode} type="checkbox" name="checkbox" className="switch" onChange={() => this.setState({ darkMode: !darkMode })} />
+                      </div>
                     </MDBNavItem>
                   </MDBNavbarNav>
                 </MDBCollapse>
               </MDBNavbar>
               {collapseID && overlay}
-              <main style={{ marginTop: '2rem'  }}>
+              <main style={{ marginTop: '2rem' }}>
                 <Routes />
               </main>
               <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#2d2e2f' }}>
@@ -240,7 +236,7 @@ class App extends Component {
                       <h5 className='title'>Logo</h5>
                       <p>
                         Penjelasan Singkat UPTD Tikomdik.
-                      </p><br/>
+                      </p><br />
                     </MDBCol>
                     <MDBCol md='3' >
                       <div className="row">
@@ -340,11 +336,11 @@ class App extends Component {
                   </MDBRow>
                 </MDBContainer>
               </MDBFooter>
-        {/* </Sidebar> */}
+              {/* </Sidebar> */}
             </div>
-      </Router>
-      </>
-    </ThemeProvider>
+          </Router>
+        </>
+      </ThemeProvider>
     );
   }
 }
