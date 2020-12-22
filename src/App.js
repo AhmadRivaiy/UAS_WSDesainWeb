@@ -229,19 +229,41 @@ class App extends Component {
               <main style={{ marginTop: '2rem' }}>
                 <Routes />
               </main>
-              <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#2d2e2f' }}>
-                <MDBContainer fluid className='text-left' style={{ fontSize: 12 }}>
+              <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#154678' }}>
+                <MDBContainer>
                   <MDBRow style={{ padding: '0.8rem' }}>
-                    <MDBCol md='3'>
-                      <h5 className='title'>Logo</h5>
+                    <MDBCol md='4'  className="d-flex flex-column" style={{ alignItems: 'center', marginBottom: 15 }}>
+                      <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 120 }} className="img-fluid align-self-center" alt="" />
+                      <br />
+                      <h4>
+                        Empowers To Educate
+                      </h4>
+                    </MDBCol>
+                    <MDBCol md='4' style={{ marginBottom: 15 }} className="d-flex flex-column align-items-center align-items-md-start">
+                      <h3 style={{ fontWeight: 'bold', marginBottom: 15 }}>
+                        Get In Touch
+                      </h3>
+                      <h6 style={{ fontWeight: 'bold' }}>CONTACT US</h6>
+                      <p>Kota, Kabupaten, Provinsi</p>
+
+                      <h6 style={{ fontWeight: 'bold' }}>EMAIL</h6>
+                      <p>example@email.ac.id</p>
+
+                      <h6 style={{ fontWeight: 'bold' }}>CONNECT WITH US</h6>
                       <p>
-                        Penjelasan Singkat UPTD Tikomdik.
-                      </p><br />
+                        <a href="#"><span><i class="fab fa-twitter-square fa-2x"></i></span></a>
+                        <a href="#"><span><i class="fab fa-google-plus-square fa-2x ml-3"></i></span></a>
+                        <a href="#"><span><i class="fab fa-facebook-square fa-2x ml-3"></i></span></a>
+                        <a href="#"><span><i class="fas fa-share-alt-square fa-2x ml-3"></i></span></a>
+                      </p>
                     </MDBCol>
-                    <MDBCol md='3' >
+                    <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start">
+                      <p style={{ fontSize: '1em' }}>
+                      "QUOTES OR HISTORY about THE COLLEGE Sed pretium nunc leo, eu ullamcorper velit sagittis id. Nam lobortis leo eget imperdiet commodo."
+                      </p>
+                      <h5 className='title d-flex justify-content-center justify-content-md-start'>Handy Links</h5>
                       <div className="row">
-                        <div className="col-6 col-md-12">
-                          <h5 className='title'>Products</h5>
+                        <div className="col-6 col-md-6 d-flex justify-content-center justify-content-md-start">
                           <ul className='list-unstyled'>
                             <li>
                               <a href='#!'>Link 1</a>
@@ -257,8 +279,7 @@ class App extends Component {
                             </li>
                           </ul>
                         </div>
-                        <div className="col-6 col-md-12">
-                          <h5 className='title'>Support</h5>
+                        <div className="col-6 col-md-6  d-flex justify-content-center justify-content-md-start">
                           <ul className='list-unstyled'>
                             <li>
                               <a href='#!'>Link 1</a>
@@ -275,63 +296,6 @@ class App extends Component {
                           </ul>
                         </div>
                       </div>
-                    </MDBCol>
-                    <MDBCol md='3'>
-                      <div className="row">
-                        <div className="col-6 col-md-12">
-                          <h5 className='title'>Handy Links</h5>
-                          <ul className='list-unstyled'>
-                            <li>
-                              <a href='#!'>Link 1</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 2</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 3</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 4</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="col-6 col-md-12">
-                          <h5 className='title'>Find Us</h5>
-                          <ul className='list-unstyled'>
-                            <li>
-                              <a href='#!'>Link 1</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 2</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 3</a>
-                            </li>
-                            <li>
-                              <a href='#!'>Link 4</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </MDBCol>
-                    <MDBCol md='3'>
-                      <MDBView className="d-flex flex-column">
-                        <h5 className='title'>About</h5>
-                        <ul className='list-unstyled'>
-                          <li>
-                            <a href='#!'>Link 1</a>
-                          </li>
-                          <li>
-                            <a href='#!'>Link 2</a>
-                          </li>
-                          <li>
-                            <a href='#!'>Link 3</a>
-                          </li>
-                          <li>
-                            <a href='#!'>Link 4</a>
-                          </li>
-                        </ul>
-                      </MDBView>
                     </MDBCol>
                   </MDBRow>
                 </MDBContainer>
