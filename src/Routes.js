@@ -143,7 +143,7 @@ class Routes extends React.Component {
         <Route path='/register' component={RegisterPage} />
         <Route
           render={function() {
-            return <h1>Not Found</h1>;
+            return <h1 className="text-center">Not Found</h1>;
           }}
         />
       </Switch>

@@ -74,24 +74,10 @@ class HomePage extends React.Component {
       <>
         <MDBView
           className="movingText d-flex justify-content-center d-block d-lg-none">
-          {/* <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontSize: 52, fontFamily: 'Poppins-Medium' }}>
-            <Typed
-              strings={[
-                'Creative',
-                'Innovative',
-                'Collaborative']}
-              typeSpeed={40}
-              backSpeed={70}
-              showCursor={false}
-              loop>
-            </Typed>
-          </h1> */}
           <div>
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 150, marginTop: '5%' }} className="img-fluid align-self-center" alt="" />
-                  <h1 style={{ color: 'white', fontFamily: 'Poppins-Light', textAlign: 'center' }}>Empowers To Educate</h1>
-                  <div className="d-flex justify-content-center" style={{ minHeight: 300 }}>
+                  <div className="d-flex justify-content-center" style={{ minHeight: 600 }}>
                     <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontSize: 52, fontFamily: 'Poppins-Medium' }}>
                       <Typed
                         strings={[
@@ -166,8 +152,8 @@ class HomePage extends React.Component {
           <div className="contents h-100" style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '2%', marginRight: '1%'}}>
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, margin: '50px' }} className="img-fluid align-self-center" alt="" />
-                  <h1 style={{ color: 'white', fontFamily: 'Poppins-Light', textAlign: 'center' }}>Empowers To Educate</h1>
+                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, marginTop: '60px' }} className="img-fluid align-self-center" alt="" />
+                  <h1 style={{ color: 'white', fontFamily: 'Poppins-Light', textAlign: 'center', marginTop: '20px' }}>Empowers To Educate</h1>
                   <div className="d-flex justify-content-center" style={{ height: '350px' }}>
                     <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Poppins-Medium', fontSize: '4em' }}>
                       <Typed

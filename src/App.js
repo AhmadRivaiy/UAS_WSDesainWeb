@@ -5,6 +5,7 @@ import {
   MDBNavbarNav,
   MDBNavbarToggler,
   MDBCollapse,
+  MDBBtn,
   MDBNavItem,
   MDBFooter,
   MDBNavLink,
@@ -23,6 +24,8 @@ import { lightTheme, darkTheme } from "./components/Themes"
 import Routes from './Routes';
 import i18n from "i18next";
 import { withTranslation } from 'react-i18next';
+import { slide as Menu } from 'react-burger-menu';
+import imgBurger from './assets/bars-solid.svg';
 
 class App extends Component {
   state = {
@@ -66,8 +69,9 @@ class App extends Component {
     collapseID === collID && this.setState({ collapseID: '' });
   };
 
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+  onSetSidebarOpen() {
+    const { sidebarOpen } = this.state;
+    this.setState({ sidebarOpen: !sidebarOpen });
   }
 
   chooseLanguage(index, params) {
@@ -106,21 +110,8 @@ class App extends Component {
           <GlobalStyles />
           <Router>
             <div className='flyout'>
-              {/* <Sidebar
-            sidebar={<b>Sidebar content</b>}
-            open={sidebarOpen}
-            onSetOpen={() => this.onSetSidebarOpen(!sidebarOpen)}
-            touch={true}
-            styles={{ sidebar: { background: "white" } }}
-          > */}
-              <MDBNavbar dark expand='md' fixed='top' scrolling color='#4C6789' style={{ maxHeight: 43, backgroundColor: '#4C6789' }}>
-                <MDBNavbarToggler
-                  onClick={this.toggleCollapse('mainNavbarCollapse')}
-                  //onClick={() => this.setState({ sidebarOpen: !sidebarOpen })}
-                  right={true}
-                  image="https://www.iconfinder.com/data/icons/basic-ui-27/64/Artboard_18-512.png"
-                />
-                <MDBCollapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
+              <MDBNavbar className="d-none d-lg-block" dark expand='md' scrolling={false} fixed='top' style={{ maxHeight: 50, backgroundColor: '#4C6789' }}>
+                <MDBCollapse id='mainNavbarCollapse' navbar className="container">
                   <MDBNavbarNav right>
                     <MDBNavItem className="d-block d-md-none">
                       <MDBView
@@ -129,63 +120,6 @@ class App extends Component {
                         <br />
                       </MDBView>
                     </MDBNavItem>
-                    {/* <MDBNavItem>
-                      <MDBNavLink
-                        exact
-                        to='/'
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                      >
-                        <strong>{t('home.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                    <MDBNavLink
-                        to='/addons'
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                      >
-                        <strong>{t('news.nav.label')}</strong>
-                      </MDBNavLink>
-                      </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/components'
-                      >
-                        <strong>{t('profile.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/advanced'
-                      >
-                        <strong>{t('events.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/navigation'
-                      >
-                        <strong>{t('gallery.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/forms'
-                      >
-                        <strong>{t('academic.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink
-                        onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/tables'
-                      >
-                        <strong>{t('about.nav.label')}</strong>
-                      </MDBNavLink>
-                    </MDBNavItem> */}
                     <MDBNavItem>
                       <MDBNavLink
                         onClick={this.closeCollapse('mainNavbarCollapse')}
@@ -225,8 +159,42 @@ class App extends Component {
                   </MDBNavbarNav>
                 </MDBCollapse>
               </MDBNavbar>
+              <MDBNavbar className="d-block d-lg-none" dark expand='md' scrolling={false} fixed='top' style={{ backgroundColor: '#4C6789' }}>
+                <div className="row">
+                  <div className="col col-2">
+                      <MDBNavbarToggler
+                      onClick={() => this.onSetSidebarOpen()}
+                      right={true}
+                      image={imgBurger}
+                      className="text-left"
+                    />
+                  </div>
+                  <div className="col col-9 text-center">
+                    <MDBNavbarBrand>
+                      <strong>Empowers To Educate</strong>
+                    </MDBNavbarBrand>
+                  </div>
+                </div>
+                
+              </MDBNavbar>
               {collapseID && overlay}
-              <main style={{ marginTop: '2rem' }}>
+              <Menu
+                onOpen={() => this.setState({ sidebarOpen: true })}
+                onClose={() => this.setState({ sidebarOpen: false })}
+                isOpen={sidebarOpen}
+                customBurgerIcon={ <span><i class="fas fa-bars fa-lg"></i></span> }
+                pageWrapId={ "page-wrap" }
+                disableAutoFocus
+              >
+                <div className="d-flex flex-column">
+                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 150 }} className="img-fluid align-self-center" alt="" />
+                  <h3 className="text-center mt-4 white-text ">Empowers To Educate</h3>
+                </div>
+                <a id="about" className="menu-item" href="/modals" style={{ color: '#B8B8B8' }}>About</a>
+                <a id="contact" className="menu-item" href="/contact">Contact</a>
+                <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+              </Menu>
+              <main id="page-wrap">
                 <Routes />
               </main>
               <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#154678' }}>
