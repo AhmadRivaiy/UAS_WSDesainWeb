@@ -52,6 +52,16 @@
 @font-face {
 	font-family: 'Poppins-Medium';
 	src: local('Poppins'), url(./assets/fonts/Poppins-Medium.ttf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Rokkitt-Bold';
+	src: local('Rokkitt'), url(./assets/fonts/Rokkitt-Bold.ttf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Rokkitt-Regular';
+	src: local('Rokkitt'), url(./assets/fonts/Rokkitt-Regular.ttf) format('opentype');
 }	
 .wrapper{
 	width: 130px;
@@ -303,7 +313,6 @@
   /* Wrapper for item list */
   .bm-item-list {
 	color: #b8b7ad;
-	padding: 0.8em;
   }
   
   /* Individual item */
@@ -315,3 +324,28 @@
   .bm-overlay {
 	background: rgba(0, 0, 0, 0.3);
   }
+
+  .btnMenu:hover {
+	color: #E8E8E8;
+}
+
+.subListMenu {
+	display: flex;
+	height: 35px;
+	padding: 25px;
+	width: 100%;
+	font-size: medium;
+	align-items: center;
+}
+
+.menuTopMobile {
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.subListMenu:hover {
+	background-color: rgba(203,203,203, 0.1);
+}

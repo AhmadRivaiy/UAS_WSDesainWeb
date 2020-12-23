@@ -79,6 +79,18 @@ header .overlay {
   z-index: 1;
 }
 
+.sloganMenu {
+  background: url('../../assets/img-slogan.png');
+  background-position: center center;
+  background-size: cover;
+}
+
+.liheBreakCustom {
+  width: 100%;
+  height: 25px;
+  background-color: #2d2e2f;
+}
+
 .corrouselRender{
   position: relative;
   color:#38567C;
@@ -94,38 +106,34 @@ header .overlay {
 }
 
 .colSeparatorHome {
-  background-color:#2d2e2f;
   height: 250px;
-}
-
-.colVerticalLine {
-  background-color: #2d2e2f;
 }
 
 .subTitleSeparator {
   color: snow;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  font-family: 'Rokkitt-Regular';
+  letter-spacing: 1px;
 }
 
 .vl-one {
-  border-left: 3px solid rgb(23, 173, 179);
-  margin-left: 2px;
-  margin-right: 2px;
+  border-left: 3px solid#B8B8B8;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 100%;
 }
 
 .vl-two {
-  border-left: 3px solid rgb(189, 144, 22);
-  margin-left: 2px;
-  margin-right: 2px;
+  border-left: 5px solid #fff;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 100%;
 }
 
 .vl-three {
-  border-left: 3px solid rgb(179, 25, 84);
-  margin-left: 2px;
-  margin-right: 2px;
+  border-left: 3px solid #B8B8B8;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 100%;
 }
 
@@ -133,9 +141,10 @@ header .overlay {
   position: relative;
   min-height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
-.rightMenu .overlay {
+.rightMenu .overlayRightMenu {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -149,9 +158,102 @@ header .overlay {
   letter-spacing: 3px;
 }
 
+.wildLife {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  width: 35%;
+  border: solid 2px;
+  border-color: #EB7979;
+}
+
+.wildLife:hover .iconWildLife {
+  background-color: #b85f5f;
+}
+
+.iconWildLife {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 20%;
+  height: 100%;
+  background-color: #EB7979;
+}
+
+.contentWildLife {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.titleWild {
+  color: #1C2331;
+  font-size: large;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.linkWild {
+  color: #4CA6FF;
+}
+
+.nameWild{
+  color: #EB7979;
+  font-weight: 500;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btnBottomContent {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 30%;
+  border-radius: 3px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  padding: 10px;
+  transition: color 0.5s;
+}
+
+.btnBottomContent:hover {
+  color: white;
+}
+
+.btnYellow {
+  background-color: #F8BC31;
+}
+
+.btnSky {
+  background-color: #83CEDE;
+}
+
 @media (max-width: 600px) {
   .colVerticalLine {
-    background-color: #2d2e2f;
     height: 50px;
+  }
+  .btnGroup {
+    flex-direction: column;
+  }
+  .wildLife {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 85%;
+    border: solid 2px;
+    border-color: #EB7979;
   }
 }

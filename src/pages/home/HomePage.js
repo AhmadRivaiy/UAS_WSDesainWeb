@@ -27,7 +27,9 @@ import imgPeople from '../../assets/billgates.png';
 import imgBuilding2 from '../../assets/building.png';
 import imgBuilding1 from '../../assets/building_i1920.png';
 import imgColor1 from '../../assets/color-1.jpg';
-import imgLogo from '../../assets/logo.png';
+import imgStudent from '../../assets/students.png';
+import imgForest from '../../assets/forest.png';
+import imgIdenty from '../../assets/identy.png';
 import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
 import { userService } from '../../services/user.service';
@@ -152,10 +154,10 @@ class HomePage extends React.Component {
           <div className="contents h-100" style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '2%', marginRight: '1%'}}>
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, marginTop: '60px' }} className="img-fluid align-self-center" alt="" />
-                  <h1 style={{ color: 'white', fontFamily: 'Poppins-Light', textAlign: 'center', marginTop: '20px' }}>Empowers To Educate</h1>
+                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
+                  <h1 style={{ color: 'white', fontFamily: 'Rokkitt-Regular', textAlign: 'center', marginTop: '20px', letterSpacing: 3 }}>Empowers To Educate</h1>
                   <div className="d-flex justify-content-center" style={{ height: '350px' }}>
-                    <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Poppins-Medium', fontSize: '4em' }}>
+                    <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Rokkitt-Bold', fontSize: '4em' }}>
                       <Typed
                         strings={[
                           'Creative',
@@ -172,8 +174,8 @@ class HomePage extends React.Component {
               </div>
             </div>
             <div className="row d-flex">
-              <div className="col d-flex justify-content-center">
-                <Link activeClass="active" to="moreWelcome" offset={-40} spy={true} smooth={true} duration={1200} >
+              <div className="col d-flex justify-content-center align-items-center" style={{ height: '30vh'}}>
+                <Link activeClass="active" to="moreWelcome" offset={-25} spy={true} smooth={true} duration={1200} >
                   <MDBBtn color="indigo" className="align-self-center z-depth-3" style={{ textTransform: 'capitalize' }}>
                     {t('more_about.btn.label')} <span><i className="fas fa-chevron-down cs_pointer ml-1"></i></span>
                   </MDBBtn>
@@ -183,12 +185,13 @@ class HomePage extends React.Component {
           </div>
         </header>
         
-        <Element name="moreWelcome" >
+        <Element name="moreWelcome" className="sloganMenu">
+          <div className="liheBreakCustom"></div>
           <div className="row justify-content-md-center" style={{ margin: '0.01%' }}>
             <div className="col col-12 col-lg-5 colSeparatorHome d-flex justify-content-center flex-column">
-              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold' }}>"Everybody Get Up and Sleep Again"</h2>
+              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"Order of the best polytechnics in Indonesia"</h2>
               <br />
-              <h5 className="subTitleSeparator align-self-center">Tes Of Week</h5>
+              <h5 className="subTitleSeparator align-self-center">Klasterisasi Kemenristekdikti</h5>
             </div>
             <div className="col col-12 col-lg-2 colVerticalLine d-flex justify-content-center flex-row">
               <div className="vl-one align-self-center"></div>
@@ -196,9 +199,9 @@ class HomePage extends React.Component {
               <div className="vl-three align-self-center"></div>
             </div>
             <div className="col col-12 col-lg-5 colSeparatorHome d-flex justify-content-center flex-column">
-              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold' }}>"Everybody Get Up and Sleep Again"</h2>
+              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"Best of the Best Poliytechnics"</h2>
               <br />
-              <h5 className="subTitleSeparator align-self-center">Tes Of Week</h5>
+              <h5 className="subTitleSeparator align-self-center">Webometrics</h5>
             </div>
           </div>
         </Element>
@@ -217,7 +220,7 @@ class HomePage extends React.Component {
                       </MDBCard>
                     </MDBCol>
                     <br />
-                    <h3><b>Bill Gates</b></h3>
+                    <h2><b>Bill Gates</b></h2>
                     <p dangerouslySetInnerHTML={
                       { __html: t('desk.home.paragraph') }
                     } style={{ fontFamily: 'MerriweatherSans-Light' }} />
@@ -232,9 +235,44 @@ class HomePage extends React.Component {
                     } style={{ fontFamily: 'MerriweatherSans-Light' }} />
                   </MDBCol>
                 </MDBRow>
-                <hr className='my-5' />
+                <div className="d-flex justify-content-center mt-4 mb-2">
+                  <div className="titleWild">For Wildlife @Ahmad_R See <font className="linkWild">https://Ahmad_R</font></div>
+                </div>
+              </MDBCol>
+              <MDBCol md='12' className='d-flex justify-content-center mb-5'>
+                <div className="wildLife">
+                  <div className="iconWildLife">
+                    <i class="fab fa-accusoft fa-2x"></i>
+                  </div>
+                  <div className="contentWildLife">
+                    <div className="nameWild">@Ahmad_R</div>
+                    <div>|</div>
+                    <div>My Portofolio</div>
+                  </div>
+                </div>
+              </MDBCol>
+              <MDBCol md='12'>
+                <p style={{ fontFamily: 'MerriweatherSans-Light' }}>
+                  Praesent scelerisque ac lorem gravida volutpat. Donec maximus commodo dolor at sagittis. Etiam eget tortor euismod, ornare arcu quis, malesuada metus.
+                  Proin nunc libero, scelerisque at est ac, accumsan convallis nisi. Nam nec nisl nisl. Integer dolor risus, eleifend sit amet pretium sit amet, fringilla non lectus. Aliquam
+                  finibus tristique egestas. Sed efficitur sem vitae bibendum malesuada. Pellentesque sit amet dignissim orci. Cras a odio sit amet elit accumsan rutrum ut in risus.
+                  Fusce ullamcorper purus et convallis dapibus. Duis quis ultrices lectus.
+                </p>
+              </MDBCol>
+              <MDBCol md='12' className="mt-5">
+                <h3>Bill Gates</h3>
+                <h4>Master of Example College</h4>
+              </MDBCol>
+              <MDBCol md='12' className="btnGroup mt-5">
+                <div className="btnBottomContent btnYellow">
+                  Discover What's On
+                </div>
+                <div className="btnBottomContent btnSky">
+                  Take The School Tour
+                </div>
               </MDBCol>
             </MDBRow>
+            <hr className='my-5' />
           </MDBContainer>
           <div className="flex-column d-none d-lg-block">
             <div style={{ marginTop: 25 }}>
@@ -245,11 +283,11 @@ class HomePage extends React.Component {
                   </div>
                 </div>
                 <div className="rightMenu">
-                  <div className="overlay">
-                    <div style={{ color: '#F6E0C4', fontWeight: 'bold' }}>10 Nov 2020</div>
-                    <div style={{ fontSize: 20, fontWeight: 'bold' }}>NEW BUILDING</div>
+                  <div className="overlayRightMenu">
+                    <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
+                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
                   </div>
-                  <MDBCardImage className="img-fluid" src={imgBuilding2} style={{ maxWidth: 350, opacity: '0.8' }} waves />
+                  <MDBCardImage className="img-fluid" src={imgBuilding2} style={{ maxWidth: 350, opacity: '0.9' }} waves />
                 </div>
               </MDBAnimation>
             </div>
@@ -261,11 +299,11 @@ class HomePage extends React.Component {
                   </div>
                 </div>
                 <div className="rightMenu">
-                  <div className="overlay">
-                    <div style={{ color: '#F6E0C4', fontWeight: 'bold' }}>10 Nov 2020</div>
-                    <div style={{ fontSize: 20, fontWeight: 'bold' }}>NEW BUILDING</div>
+                  <div className="overlayRightMenu">
+                    <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
+                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
                   </div>
-                  <MDBCardImage className="img-fluid" src={imgColor1} style={{ maxWidth: 350, opacity: '0.8', height: 350 }} waves />
+                  <MDBCardImage className="img-fluid" src={imgColor1} style={{ maxWidth: 350, opacity: '0.9', height: 350 }} waves />
                 </div>
               </MDBAnimation>
             </div>
@@ -279,26 +317,26 @@ class HomePage extends React.Component {
               </MDBAnimation>
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlay">
-                    <div style={{ fontSize: 20, fontWeight: 'bold' }}>Admission of New Students</div>
+                  <div className="overlayRightMenu">
+                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Admission of New Students</div>
                   </div>
-                  <MDBCardImage className="img-fluid" src={imgPeople} style={{ maxWidth: 350, opacity: '0.8' }} waves />
+                  <MDBCardImage className="img-fluid" src={imgStudent} style={{ maxWidth: 350, opacity: '0.9' }} waves />
                 </div>
               </MDBAnimation>
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlay">
-                    <div style={{ fontSize: 20, fontWeight: 'bold' }}>Where We are</div>
+                  <div className="overlayRightMenu">
+                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Where We are</div>
                   </div>
-                  <MDBCardImage className="img-fluid" src={imgPeople} style={{ maxWidth: 350, opacity: '0.8' }} waves />
+                  <MDBCardImage className="img-fluid" src={imgForest} style={{ maxWidth: 350, opacity: '0.9' }} waves />
                 </div>
               </MDBAnimation>
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlay">
-                    <div style={{ fontSize: 20, fontWeight: 'bold' }}>The Example Identity</div>
+                  <div className="overlayRightMenu">
+                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>The Example Identity</div>
                   </div>
-                  <MDBCardImage className="img-fluid" src={imgPeople} style={{ maxWidth: 350, opacity: '0.8' }} waves />
+                  <MDBCardImage className="img-fluid" src={imgIdenty} style={{ maxWidth: 350, opacity: '0.9' }} waves />
                 </div>
               </MDBAnimation>
             </div>

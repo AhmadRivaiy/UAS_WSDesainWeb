@@ -25,7 +25,7 @@ import Routes from './Routes';
 import i18n from "i18next";
 import { withTranslation } from 'react-i18next';
 import { slide as Menu } from 'react-burger-menu';
-import imgBurger from './assets/bars-solid.svg';
+import imgBurger from './assets/ic_menu.png';
 
 class App extends Component {
   state = {
@@ -162,7 +162,7 @@ class App extends Component {
               <MDBNavbar className="d-block d-lg-none" dark expand='md' scrolling={false} fixed='top' style={{ backgroundColor: '#4C6789' }}>
                 <div className="row">
                   <div className="col col-2">
-                      <MDBNavbarToggler
+                    <MDBNavbarToggler
                       onClick={() => this.onSetSidebarOpen()}
                       right={true}
                       image={imgBurger}
@@ -175,24 +175,118 @@ class App extends Component {
                     </MDBNavbarBrand>
                   </div>
                 </div>
-                
+
               </MDBNavbar>
               {collapseID && overlay}
               <Menu
                 onOpen={() => this.setState({ sidebarOpen: true })}
                 onClose={() => this.setState({ sidebarOpen: false })}
                 isOpen={sidebarOpen}
-                customBurgerIcon={ <span><i class="fas fa-bars fa-lg"></i></span> }
-                pageWrapId={ "page-wrap" }
+                customBurgerIcon={<span><i class="fas fa-bars fa-lg"></i></span>}
+                pageWrapId={"page-wrap"}
                 disableAutoFocus
+                width={350}
+                itemListElement="div"
               >
                 <div className="d-flex flex-column">
                   <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 150 }} className="img-fluid align-self-center" alt="" />
                   <h3 className="text-center mt-4 white-text ">Empowers To Educate</h3>
                 </div>
-                <a id="about" className="menu-item" href="/modals" style={{ color: '#B8B8B8' }}>About</a>
-                <a id="contact" className="menu-item" href="/contact">Contact</a>
-                <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+                <hr style={{ border: '1', borderColor: 'white' }}/>
+                <div className="flex-column d-block d-lg-none">
+                  <div className="menuTopMobile">
+                    <div className="pt-2"><i className="fas fa-search fa-lg"></i></div>
+                    <div><input checked={!darkMode} type="checkbox" name="checkbox" className="switch" onChange={() => this.setState({ darkMode: !darkMode })} /></div>
+                    <div className="pt-2"><font onClick={() => this.chooseLanguage('id', '0')}>ID</font> | <font onClick={() => this.chooseLanguage('en', '1')}>EN</font></div>
+                  </div>
+                  <hr style={{ border: '1', borderColor: 'white' }}/>
+                </div>
+                <MDBBtn
+                  color="blue-darken-4"
+                  onClick={this.toggleCollapse("Collapse1")}
+                  style={{ width: '99%', backgroundColor: 'transparent' }}
+                  size="lg"
+                  className="btnMenu text-capitalize text-left pt-3 pb-3 pl-2 pr-0 mb-0 mr-0"
+                >
+                  <i className={collapseID == "Collapse1" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    News & Events
+                </MDBBtn>
+                <div>
+                  <MDBCollapse id="Collapse1" isOpen={this.state.collapseID}>
+                    <ul className='list-unstyled'>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 1
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 2
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 3
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 4
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </MDBCollapse>
+                </div>
+                <MDBBtn
+                  color="blue-darken-4"
+                  onClick={this.toggleCollapse("Collapse2")}
+                  style={{ width: '99%', backgroundColor: 'transparent' }}
+                  size="lg"
+                  className="btnMenu text-capitalize text-left pt-3 pb-3 pr-0 pl-2 mb-0 mr-0"
+                >
+                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    Academic
+                </MDBBtn>
+                <div>
+                  <MDBCollapse id="Collapse2" isOpen={this.state.collapseID}>
+                    <ul className='list-unstyled'>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 1
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 2
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 3
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#!' className="white-text">
+                          <div className="subListMenu">
+                            Link 4
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </MDBCollapse>
+                </div>
               </Menu>
               <main id="page-wrap">
                 <Routes />
@@ -200,7 +294,7 @@ class App extends Component {
               <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#154678' }}>
                 <MDBContainer>
                   <MDBRow style={{ padding: '0.8rem' }}>
-                    <MDBCol md='4'  className="d-flex flex-column" style={{ alignItems: 'center', marginBottom: 15 }}>
+                    <MDBCol md='4' className="d-flex flex-column" style={{ alignItems: 'center', marginBottom: 15 }}>
                       <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 120 }} className="img-fluid align-self-center" alt="" />
                       <br />
                       <h4>
@@ -227,7 +321,7 @@ class App extends Component {
                     </MDBCol>
                     <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start">
                       <p style={{ fontSize: '1em' }}>
-                      "QUOTES OR HISTORY about THE COLLEGE Sed pretium nunc leo, eu ullamcorper velit sagittis id. Nam lobortis leo eget imperdiet commodo."
+                        "QUOTES OR HISTORY about THE COLLEGE Sed pretium nunc leo, eu ullamcorper velit sagittis id. Nam lobortis leo eget imperdiet commodo."
                       </p>
                       <h5 className='title d-flex justify-content-center justify-content-md-start'>Handy Links</h5>
                       <div className="row">
