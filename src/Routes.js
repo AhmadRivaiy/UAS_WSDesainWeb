@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+//Main
+import HomePage from './pages/home/HomePage';
+import AboutPage from './pages/about_us/AboutPage';
+
 import NavigationNavPage from './pages/NavigationNavPage';
 import FormsNavPage from './pages/FormsNavPage';
 import TablesNavPage from './pages/TablesNavPage';
@@ -12,7 +16,6 @@ import ComponentsNavPage from './pages/ComponentsNavPage';
 // FREE
 import AnimationPage from './pages/AnimationPage';
 import AlertPage from './pages/AlertPage';
-import HomePage from './pages/home/HomePage';
 import ButtonPage from './pages/ButtonPage';
 import CSSNavPage from './pages/CSSNavPage';
 import TablePage from './pages/TablePage';
@@ -78,6 +81,8 @@ class Routes extends React.Component {
       <React.Suspense fallback={loading}>
       <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route exact path='/about' component={AboutPage} />
+
         <Route exact path='/addons' component={AddonsNavPage} />
         <Route exact path='/advanced' component={AdvancedNavPage} />
         <Route exact path='/components' component={ComponentsNavPage} />

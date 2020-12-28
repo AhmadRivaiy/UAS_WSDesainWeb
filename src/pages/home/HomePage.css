@@ -240,6 +240,13 @@ header .overlay {
   background-color: #83CEDE;
 }
 
+.titleHeaderPhone {
+  padding-left: 5%;
+  color: #C0D9EF;
+  font-family: 'Rokkitt-Bold';
+  font-size: 50px;
+}
+
 @media (max-width: 600px) {
   .colVerticalLine {
     height: 50px;
@@ -255,5 +262,12 @@ header .overlay {
     width: 85%;
     border: solid 2px;
     border-color: #EB7979;
+  }
+  .btnPhone{
+    display: flex;
+    justify-content: center;
+  }
+  .titleHeaderPhone {
+    text-align: center;
   }
 }

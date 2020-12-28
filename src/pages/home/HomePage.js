@@ -30,9 +30,10 @@ import imgColor1 from '../../assets/color-1.jpg';
 import imgStudent from '../../assets/students.png';
 import imgForest from '../../assets/forest.png';
 import imgIdenty from '../../assets/identy.png';
+import imgLogo from '../../assets/img/home/logo.png';
 import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
-import { userService } from '../../services/user.service';
+import { userService } from '../../services/user.service'; 
 import { apiGetContentHome } from '../../components';
 import { withTranslation } from 'react-i18next';
 
@@ -154,7 +155,7 @@ class HomePage extends React.Component {
           <div className="contents h-100" style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '2%', marginRight: '1%'}}>
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
+                  <img src={imgLogo} style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
                   <h1 style={{ color: 'white', fontFamily: 'Rokkitt-Regular', textAlign: 'center', marginTop: '20px', letterSpacing: 3 }}>Empowers To Educate</h1>
                   <div className="d-flex justify-content-center" style={{ height: '350px' }}>
                     <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Rokkitt-Bold', fontSize: '4em' }}>
@@ -174,7 +175,7 @@ class HomePage extends React.Component {
               </div>
             </div>
             <div className="row d-flex">
-              <div className="col d-flex justify-content-center align-items-center" style={{ height: '30vh'}}>
+              <div className="col d-flex justify-content-center align-items-center" style={{ height: '23vh'}}>
                 <Link activeClass="active" to="moreWelcome" offset={-25} spy={true} smooth={true} duration={1200} >
                   <MDBBtn color="indigo" className="align-self-center z-depth-3" style={{ textTransform: 'capitalize' }}>
                     {t('more_about.btn.label')} <span><i className="fas fa-chevron-down cs_pointer ml-1"></i></span>
@@ -236,7 +237,7 @@ class HomePage extends React.Component {
                   </MDBCol>
                 </MDBRow>
                 <div className="d-flex justify-content-center mt-4 mb-2">
-                  <div className="titleWild">For Wildlife @Ahmad_R See <font className="linkWild">https://Ahmad_R</font></div>
+                  <div className="titleWild">For Wildlife @Bill_Gates See <font className="linkWild">https://Bill_Gates</font></div>
                 </div>
               </MDBCol>
               <MDBCol md='12' className='d-flex justify-content-center mb-5'>

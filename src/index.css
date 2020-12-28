@@ -349,3 +349,9 @@
 .subListMenu:hover {
 	background-color: rgba(203,203,203, 0.1);
 }
+
+.titleFooter {
+	color: #FFAB2D;
+	font-weight: bold;
+	font-family: 'Rokkitt-Bold';
+}

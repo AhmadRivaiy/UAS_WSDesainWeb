@@ -26,6 +26,7 @@ import i18n from "i18next";
 import { withTranslation } from 'react-i18next';
 import { slide as Menu } from 'react-burger-menu';
 import imgBurger from './assets/ic_menu.png';
+import imgLogo from './assets/img/home/logo.png';
 
 class App extends Component {
   state = {
@@ -189,7 +190,7 @@ class App extends Component {
                 itemListElement="div"
               >
                 <div className="d-flex flex-column">
-                  <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 150 }} className="img-fluid align-self-center" alt="" />
+                  <img src={imgLogo} style={{ maxWidth: 150 }} className="img-fluid align-self-center" alt="" />
                   <h3 className="text-center mt-4 white-text ">Empowers To Educate</h3>
                 </div>
                 <hr style={{ border: '1', borderColor: 'white' }}/>
@@ -235,9 +236,9 @@ class App extends Component {
                         </a>
                       </li>
                       <li>
-                        <a href='#!' className="white-text">
+                        <a href='/about' className="white-text">
                           <div className="subListMenu">
-                            Link 4
+                            About
                           </div>
                         </a>
                       </li>
@@ -257,9 +258,9 @@ class App extends Component {
                   <MDBCollapse id="Collapse2" isOpen={this.state.collapseID}>
                     <ul className='list-unstyled'>
                       <li>
-                        <a href='#!' className="white-text">
+                        <a href='/' className="white-text">
                           <div className="subListMenu">
-                            Link 1
+                            Home
                           </div>
                         </a>
                       </li>
@@ -295,23 +296,23 @@ class App extends Component {
                 <MDBContainer>
                   <MDBRow style={{ padding: '0.8rem' }}>
                     <MDBCol md='4' className="d-flex flex-column" style={{ alignItems: 'center', marginBottom: 15 }}>
-                      <img src="https://i.pinimg.com/originals/86/7d/ac/867daccad6db6687934fb6b7e81c4316.png" style={{ maxWidth: 120 }} className="img-fluid align-self-center" alt="" />
+                      <img src={imgLogo} style={{ maxWidth: 120 }} className="img-fluid align-self-center" alt="" />
                       <br />
                       <h4>
                         Empowers To Educate
                       </h4>
                     </MDBCol>
-                    <MDBCol md='4' style={{ marginBottom: 15 }} className="d-flex flex-column align-items-center align-items-md-start">
-                      <h3 style={{ fontWeight: 'bold', marginBottom: 15 }}>
+                    <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start mb-3">
+                      <h2 className="titleFooter mb-3">
                         Get In Touch
-                      </h3>
-                      <h6 style={{ fontWeight: 'bold' }}>CONTACT US</h6>
+                      </h2>
+                      <h5 className="titleFooter">CONTACT US</h5>
                       <p>Kota, Kabupaten, Provinsi</p>
 
-                      <h6 style={{ fontWeight: 'bold' }}>EMAIL</h6>
+                      <h5 className="titleFooter">EMAIL</h5>
                       <p>example@email.ac.id</p>
 
-                      <h6 style={{ fontWeight: 'bold' }}>CONNECT WITH US</h6>
+                      <h5 className="titleFooter">CONNECT WITH US</h5>
                       <p>
                         <a href="#"><span><i class="fab fa-twitter-square fa-2x"></i></span></a>
                         <a href="#"><span><i class="fab fa-google-plus-square fa-2x ml-3"></i></span></a>
@@ -320,7 +321,7 @@ class App extends Component {
                       </p>
                     </MDBCol>
                     <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start">
-                      <p style={{ fontSize: '1em' }}>
+                      <p style={{ fontSize: '1em', textAlign: 'center' }}>
                         "QUOTES OR HISTORY about THE COLLEGE Sed pretium nunc leo, eu ullamcorper velit sagittis id. Nam lobortis leo eget imperdiet commodo."
                       </p>
                       <h5 className='title d-flex justify-content-center justify-content-md-start'>Handy Links</h5>
