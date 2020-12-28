@@ -7,12 +7,11 @@ import {
     MDBBtn,
     MDBCard, MDBCardImage, MDBCardBody, MDBCardText
 } from 'mdbreact';
+import { Link as LinkTo } from 'react-router-dom';
 import './AboutPage.css';
 import imgBgAbout from '../../assets/img/about/about.png';
 import imgBgAboutPhone from '../../assets/img/about/phone_res.jpg';
-import imgPeople from '../../assets/billgates.png';
 import imgBuilding2 from '../../assets/building.png';
-import imgBuilding1 from '../../assets/building_i1920.png';
 import imgColor1 from '../../assets/color-1.jpg';
 import imgStudent from '../../assets/students.png';
 import imgForest from '../../assets/forest.png';
@@ -70,22 +69,22 @@ class AboutPage extends React.Component {
                             <MDBCol md='12' className='mt-4'>
                                 <MDBRow id='categories'>
                                     <MDBCol md="12">
-                                        <MDBCol md="8">
+                                        <MDBCol md="9">
                                             <MDBCard>
-                                                <MDBCardImage className="img-fluid" src={imgPeople} />
                                                 <MDBCardBody>
-                                                    <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-                                                </MDBCardBody>
+                                                    <div>
+                                                        <iframe width="100%" height="480" src="https://www.youtube.com/embed/2n10aj7xf2g?controls=1&autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted;" allowfullscreen ></iframe>
+                                                    </div>
+                                                    </MDBCardBody>
                                             </MDBCard>
                                         </MDBCol>
                                         <br />
-                                        <h2><b>Bill Gates</b></h2>
                                         <p dangerouslySetInnerHTML={
                                             { __html: t('desk.home.paragraph') }
                                         } style={{ fontFamily: 'MerriweatherSans-Light' }} />
                                     </MDBCol>
                                     <MDBCol md="12">
-                                        <img src={imgBuilding1} width="80%" height="auto" alt="UPTD TIKOMDIK" />
+                                        <img src="/assets/img/about_img.png" width="80%" height="auto" alt="UPTD TIKOMDIK" />
                                     </MDBCol>
                                     <MDBCol md="12">
                                         <br />
@@ -96,122 +95,127 @@ class AboutPage extends React.Component {
                                 </MDBRow>
                             </MDBCol>
                             <MDBCol md='12' className="btnGroup mt-5">
-                                <div className="btnBottomContent btnYellow">
-                                    Discover What's On
-                            </div>
-                                <div className="btnBottomContent btnSky">
-                                    Take The School Tour
-                            </div>
+                                <div className="btnBottomContent btnSky btnNext">
+                                    Take The School Tour <span><i class="fas fa-arrow-right cs_pointer fa-lg"></i></span>
+                                </div>
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
                     <div className="flex-column d-none d-lg-block">
-                        <div style={{ backgroundColor: '#38567C' }}>
+                        <div className="bgRightMenu">
                             <div className="d-flex flex-column align-items-center">
-                                <img className="img-fluid m-4" src={imgLogo} style={{ maxWidth: 100 }} />
-                                <p style={{ fontFamily: 'Poppins-ExtraBold', color: 'white', letterSpacing: 2 }}>The Example College</p>
+                                <img className="img-fluid m-4 imgRightMenu" src={imgLogo} />
+                                <p className="titleRightMenu">The Example College</p>
                                 <div className="d-flex ">
                                     <ul className="breadcrumb">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="/about">About</a></li>
+                                        <li>
+                                            <LinkTo to='/'>
+                                                Home
+                                            </LinkTo>
+                                        </li>
+                                        <li>
+                                            <LinkTo to='/about'>
+                                                About
+                                            </LinkTo>
+                                        </li>
                                         <li>The Example College</li>
                                     </ul>
                                 </div>
-                                <p style={{ fontFamily: 'Poppins-ExtraBold', color: '#41BBDB', fontSize: 32 }}>About</p>
+                                <p className="subTitleRightMenu">About</p>
                                 <ul className='list-unstyled'>
                                     <li>
                                         <a href='#!' className="white-text">
-                                        <div className="subListMenu">
-                                            Link 1
-                                        </div>
+                                            <div className="subListMenu">
+                                                Link 1
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href='#!' className="white-text">
-                                        <div className="subListMenu">
-                                            Link 2
-                                        </div>
+                                            <div className="subListMenu">
+                                                Link 2
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href='#!' className="white-text">
-                                        <div className="subListMenu">
-                                            Link 3
-                                        </div>
+                                            <div className="subListMenu">
+                                                Link 3
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='/about' className="white-text">
-                                        <div className="subListMenu">
-                                            About
-                                        </div>
-                                        </a>
+                                        <LinkTo className="white-text" to='/about'>
+                                            <div className="subListMenu">
+                                                About
+                                            </div>
+                                        </LinkTo>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div style={{ marginTop: 25 }}>
+                        <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p style={{ fontFamily: 'Poppins-ExtraBold' }}>Related News</p>
+                                    <p className="fontTitleRightContentPrim">Related News</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
                                 <div className="rightMenu">
                                     <div className="overlayRightMenu">
-                                        <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
-                                        <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
+                                        <div className="fontTitleRightContent">10 Nov 2020</div>
+                                        <div className="fontSubTitleRightContent">NEW BUILDING</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid" src={imgBuilding2} style={{ maxWidth: 350, opacity: '0.9' }} waves />
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgBuilding2} waves />
                                 </div>
                             </MDBAnimation>
                         </div>
-                        <div style={{ marginTop: 25 }}>
+                        <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p style={{ fontFamily: 'Poppins-ExtraBold' }}>Upcomming Events</p>
+                                    <p className="fontTitleRightContentPrim">Upcomming Events</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
                                 <div className="rightMenu">
                                     <div className="overlayRightMenu">
-                                        <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
-                                        <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
+                                        <div className="fontTitleRightContent">10 Nov 2020</div>
+                                        <div className="fontSubTitleRightContent">NEW BUILDING</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid" src={imgColor1} style={{ maxWidth: 350, opacity: '0.9', height: 350 }} waves />
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgColor1} waves />
                                 </div>
                             </MDBAnimation>
                         </div>
-                        <div style={{ marginTop: 25 }}>
+                        <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p style={{ fontFamily: 'Poppins-ExtraBold' }}>What's Next ?</p>
+                                    <p className="fontTitleRightContentPrim">What's Next ?</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
                             </MDBAnimation>
                             <MDBAnimation reveal type='fadeInRight'>
-                                <div className="rightMenu" style={{ marginTop: 15 }}>
+                                <div className="rightMenu mt-2">
                                     <div className="overlayRightMenu">
-                                        <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Admission of New Students</div>
+                                        <div className="fontSubTitleRightContent">Admission of New Students</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid" src={imgStudent} style={{ maxWidth: 350, opacity: '0.9' }} waves />
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgStudent} waves />
                                 </div>
                             </MDBAnimation>
                             <MDBAnimation reveal type='fadeInRight'>
-                                <div className="rightMenu" style={{ marginTop: 15 }}>
+                                <div className="rightMenu mt-2">
                                     <div className="overlayRightMenu">
-                                        <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Where We are</div>
+                                        <div className="fontSubTitleRightContent">Where We are</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid" src={imgForest} style={{ maxWidth: 350, opacity: '0.9' }} waves />
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgForest} waves />
                                 </div>
                             </MDBAnimation>
                             <MDBAnimation reveal type='fadeInRight'>
-                                <div className="rightMenu" style={{ marginTop: 15 }}>
+                                <div className="rightMenu mt-2">
                                     <div className="overlayRightMenu">
-                                        <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>The Example Identity</div>
+                                        <div className="fontSubTitleRightContent">The Example Identity</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid" src={imgIdenty} style={{ maxWidth: 350, opacity: '0.9' }} waves />
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgIdenty} waves />
                                 </div>
                             </MDBAnimation>
                         </div>

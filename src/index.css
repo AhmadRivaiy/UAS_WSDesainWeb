@@ -355,3 +355,46 @@
 	font-weight: bold;
 	font-family: 'Rokkitt-Bold';
 }
+
+.bgRightMenu {
+	background-color: #38567C;
+}
+
+.imgRightMenu {
+	max-width: 100px;
+}
+
+.titleRightMenu {
+	font-family: 'Poppins-ExtraBold';
+	color: white;
+	letter-spacing: 2px;
+}
+
+.subTitleRightMenu {
+	font-family: 'Poppins-ExtraBold';
+	color: #41BBDB;
+	letter-spacing: 2;
+	font-size: 32px;
+}
+
+.fontTitleRightContentPrim {
+	font-family: 'Poppins-ExtraBold';
+	letter-spacing: 2px;
+}
+
+.fontTitleRightContent {
+	color: #F6E0C4;
+	font-weight: bold;
+	font-family: 'Rokkitt-Bold';
+}
+
+.fontSubTitleRightContent {
+	font-weight: bold;
+	font-family: 'Rokkitt-Bold';
+	font-size: 20px;
+}
+
+.imgRightContent {
+	max-width: 350px;
+	opacity: 0.9;
+}

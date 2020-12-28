@@ -240,6 +240,10 @@ header .overlay {
   background-color: #83CEDE;
 }
 
+.btnNext {
+  justify-content: space-between;
+}
+
 .titleHeaderPhone {
   padding-left: 5%;
   color: #C0D9EF;

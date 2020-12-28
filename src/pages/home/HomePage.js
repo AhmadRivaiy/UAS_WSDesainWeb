@@ -27,14 +27,8 @@ import imgPeople from '../../assets/billgates.png';
 import imgBuilding2 from '../../assets/building.png';
 import imgBuilding1 from '../../assets/building_i1920.png';
 import imgColor1 from '../../assets/color-1.jpg';
-import imgStudent from '../../assets/students.png';
-import imgForest from '../../assets/forest.png';
-import imgIdenty from '../../assets/identy.png';
-import imgLogo from '../../assets/img/home/logo.png';
 import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
-import { userService } from '../../services/user.service'; 
-import { apiGetContentHome } from '../../components';
 import { withTranslation } from 'react-i18next';
 
 class HomePage extends React.Component {
@@ -155,7 +149,7 @@ class HomePage extends React.Component {
           <div className="contents h-100" style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '2%', marginRight: '1%'}}>
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <img src={imgLogo} style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
+                  <img src="/assets/img/logow.png" style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
                   <h1 style={{ color: 'white', fontFamily: 'Rokkitt-Regular', textAlign: 'center', marginTop: '20px', letterSpacing: 3 }}>Empowers To Educate</h1>
                   <div className="d-flex justify-content-center" style={{ height: '350px' }}>
                     <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Rokkitt-Bold', fontSize: '4em' }}>
@@ -276,71 +270,71 @@ class HomePage extends React.Component {
             <hr className='my-5' />
           </MDBContainer>
           <div className="flex-column d-none d-lg-block">
-            <div style={{ marginTop: 25 }}>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="d-flex flex-row">
-                  <p style={{ fontFamily: 'Poppins-ExtraBold' }}>Related News</p>
-                  <div className="d-flex justify-content-center">
-                  </div>
-                </div>
-                <div className="rightMenu">
-                  <div className="overlayRightMenu">
-                    <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
-                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
-                  </div>
-                  <MDBCardImage className="img-fluid" src={imgBuilding2} style={{ maxWidth: 350, opacity: '0.9' }} waves />
-                </div>
-              </MDBAnimation>
-            </div>
-            <div style={{ marginTop: 25 }}>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="d-flex flex-row">
-                  <p style={{ fontFamily: 'Poppins-ExtraBold' }}>Upcomming Events</p>
-                  <div className="d-flex justify-content-center">
-                  </div>
-                </div>
-                <div className="rightMenu">
-                  <div className="overlayRightMenu">
-                    <div style={{ color: '#F6E0C4', fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>10 Nov 2020</div>
-                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>NEW BUILDING</div>
-                  </div>
-                  <MDBCardImage className="img-fluid" src={imgColor1} style={{ maxWidth: 350, opacity: '0.9', height: 350 }} waves />
-                </div>
-              </MDBAnimation>
-            </div>
-            <div style={{ marginTop: 25 }}>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="d-flex flex-row">
-                  <p style={{ fontFamily: 'Poppins-ExtraBold' }}>What's Next ?</p>
-                  <div className="d-flex justify-content-center">
-                  </div>
-                </div>
-              </MDBAnimation>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlayRightMenu">
-                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Admission of New Students</div>
-                  </div>
-                  <MDBCardImage className="img-fluid" src={imgStudent} style={{ maxWidth: 350, opacity: '0.9' }} waves />
-                </div>
-              </MDBAnimation>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlayRightMenu">
-                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>Where We are</div>
-                  </div>
-                  <MDBCardImage className="img-fluid" src={imgForest} style={{ maxWidth: 350, opacity: '0.9' }} waves />
-                </div>
-              </MDBAnimation>
-              <MDBAnimation reveal type='fadeInRight'>
-                <div className="rightMenu" style={{ marginTop: 15 }}>
-                  <div className="overlayRightMenu">
-                    <div style={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>The Example Identity</div>
-                  </div>
-                  <MDBCardImage className="img-fluid" src={imgIdenty} style={{ maxWidth: 350, opacity: '0.9' }} waves />
-                </div>
-              </MDBAnimation>
-            </div>
+          <div className="mt-4">
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="d-flex flex-row">
+                                    <p className="fontTitleRightContentPrim">Related News</p>
+                                    <div className="d-flex justify-content-center">
+                                    </div>
+                                </div>
+                                <div className="rightMenu">
+                                    <div className="overlayRightMenu">
+                                        <div className="fontTitleRightContent">10 Nov 2020</div>
+                                        <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                    </div>
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgBuilding2} waves />
+                                </div>
+                            </MDBAnimation>
+                        </div>
+                        <div className="mt-4">
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="d-flex flex-row">
+                                    <p className="fontTitleRightContentPrim">Upcomming Events</p>
+                                    <div className="d-flex justify-content-center">
+                                    </div>
+                                </div>
+                                <div className="rightMenu">
+                                    <div className="overlayRightMenu">
+                                        <div className="fontTitleRightContent">10 Nov 2020</div>
+                                        <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                    </div>
+                                    <MDBCardImage className="img-fluid imgRightContent" src={imgColor1} waves />
+                                </div>
+                            </MDBAnimation>
+                        </div>
+                        <div className="mt-4">
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="d-flex flex-row">
+                                    <p className="fontTitleRightContentPrim">What's Next ?</p>
+                                    <div className="d-flex justify-content-center">
+                                    </div>
+                                </div>
+                            </MDBAnimation>
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="rightMenu mt-2">
+                                    <div className="overlayRightMenu">
+                                        <div className="fontSubTitleRightContent">Admission of New Students</div>
+                                    </div>
+                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/students.png" waves />
+                                </div>
+                            </MDBAnimation>
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="rightMenu mt-2">
+                                    <div className="overlayRightMenu">
+                                        <div className="fontSubTitleRightContent">Where We are</div>
+                                    </div>
+                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/forest.png" waves />
+                                </div>
+                            </MDBAnimation>
+                            <MDBAnimation reveal type='fadeInRight'>
+                                <div className="rightMenu mt-2">
+                                    <div className="overlayRightMenu">
+                                        <div className="fontSubTitleRightContent">The Example Identity</div>
+                                    </div>
+                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves />
+                                </div>
+                            </MDBAnimation>
+                        </div>
           </div>
         </div>
       </>

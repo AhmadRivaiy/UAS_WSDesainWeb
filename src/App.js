@@ -16,8 +16,10 @@ import {
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
+  MDBLink,
+  MDBAnimation
 } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter, BrowserRouter as Router, Link } from 'react-router-dom';
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/Themes"
@@ -34,7 +36,8 @@ class App extends Component {
     sidebarOpen: false,
     en: false,
     id: false,
-    darkMode: false
+    darkMode: false,
+    activeItemPills: '1'
   };
 
   componentDidMount() {
@@ -59,6 +62,16 @@ class App extends Component {
     }
   }
 
+  togglePills = tab => () => {
+    const { activePills } = this.state;
+    if (activePills !== tab) {
+      this.setState({
+        activeItemPills: tab,
+        sidebarOpen: false
+      });
+    }
+  };
+  
   toggleCollapse = collapseID => () =>
     this.setState(prevState => ({
       collapseID: prevState.collapseID !== collapseID ? collapseID : ''
@@ -101,7 +114,7 @@ class App extends Component {
       />
     );
 
-    const { collapseID, sidebarOpen, en, id, darkMode } = this.state;
+    const { collapseID, sidebarOpen, en, id, darkMode, activeItemPills  } = this.state;
     const { t } = this.props;
     const theme = 'dark';
 
@@ -109,7 +122,7 @@ class App extends Component {
       <ThemeProvider theme={!darkMode ? lightTheme : darkTheme}>
         <>
           <GlobalStyles />
-          <Router>
+          <Router basename="/UAS_WSDesainWeb">
             <div className='flyout'>
               <MDBNavbar className="d-none d-lg-block" dark expand='md' scrolling={false} fixed='top' style={{ maxHeight: 50, backgroundColor: '#4C6789' }}>
                 <MDBCollapse id='mainNavbarCollapse' navbar className="container">
@@ -215,11 +228,11 @@ class App extends Component {
                   <MDBCollapse id="Collapse1" isOpen={this.state.collapseID}>
                     <ul className='list-unstyled'>
                       <li>
-                        <a href='#!' className="white-text">
+                        <Link className="white-text" to='/' onClick={this.togglePills('1')}>
                           <div className="subListMenu">
-                            Link 1
+                            Home
                           </div>
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a href='#!' className="white-text">
@@ -236,11 +249,11 @@ class App extends Component {
                         </a>
                       </li>
                       <li>
-                        <a href='/about' className="white-text">
+                        <Link className="white-text" to='/about' onClick={this.togglePills('2')}>
                           <div className="subListMenu">
                             About
                           </div>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </MDBCollapse>
@@ -258,11 +271,11 @@ class App extends Component {
                   <MDBCollapse id="Collapse2" isOpen={this.state.collapseID}>
                     <ul className='list-unstyled'>
                       <li>
-                        <a href='/' className="white-text">
-                          <div className="subListMenu">
+                        <MDBLink className="white-text" to='/' active={activeItemPills === '1'} onClick={this.togglePills('1')} link>
+                        <div className="subListMenu">
                             Home
                           </div>
-                        </a>
+                        </MDBLink>
                       </li>
                       <li>
                         <a href='#!' className="white-text">
@@ -289,9 +302,11 @@ class App extends Component {
                   </MDBCollapse>
                 </div>
               </Menu>
-              <main id="page-wrap">
-                <Routes />
-              </main>
+              <MDBAnimation type="fadeIn" duration="2s">
+                <main id="page-wrap">
+                    <Routes />
+                </main>
+              </MDBAnimation>
               <MDBFooter className="pt-4 mt-4" style={{ backgroundColor: '#154678' }}>
                 <MDBContainer>
                   <MDBRow style={{ padding: '0.8rem' }}>

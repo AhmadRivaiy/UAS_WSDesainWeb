@@ -2,7 +2,7 @@
   "name": "your-app",
   "version": "0.1.0",
   "private": true,
-  "// If You want to install mdbreact from our GitLab repository, please replace '4.27.0' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
+  "homepage": ".",
   "dependencies": {
     "@kunukn/react-collapse": "^1.2.7",
     "axios": "^0.21.0",
