@@ -232,14 +232,6 @@ header .overlay {
   color: white;
 }
 
-.btnYellow {
-  background-color: #F8BC31;
-}
-
-.btnSky {
-  background-color: #83CEDE;
-}
-
 .btnNext {
   justify-content: space-between;
 }
@@ -248,7 +240,7 @@ header .overlay {
   padding-left: 5%;
   color: #C0D9EF;
   font-family: 'Rokkitt-Bold';
-  font-size: 50px;
+  font-size: 55px;
 }
 
 @media (max-width: 600px) {
@@ -272,6 +264,6 @@ header .overlay {
     justify-content: center;
   }
   .titleHeaderPhone {
-    text-align: center;
+    justify-content: center;
   }
 }

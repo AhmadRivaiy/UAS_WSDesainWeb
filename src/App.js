@@ -215,6 +215,18 @@ class App extends Component {
                   </div>
                   <hr style={{ border: '1', borderColor: 'white' }}/>
                 </div>
+                <Link
+                  to="/" onClick={this.togglePills('1')}
+                >
+                  <MDBBtn
+                    color="blue-darken-4"
+                    style={{ width: '99%', backgroundColor: 'transparent' }}
+                    size="lg"
+                    className="btnMenu text-capitalize text-left pt-3 pb-3 pl-2 pr-0 mb-0 mr-0"
+                  >
+                    <i className="fas fa-home" />    Home
+                  </MDBBtn>
+                </Link>
                 <MDBBtn
                   color="blue-darken-4"
                   onClick={this.toggleCollapse("Collapse1")}
@@ -228,9 +240,9 @@ class App extends Component {
                   <MDBCollapse id="Collapse1" isOpen={this.state.collapseID}>
                     <ul className='list-unstyled'>
                       <li>
-                        <Link className="white-text" to='/' onClick={this.togglePills('1')}>
+                        <Link className="white-text" to='/news' onClick={this.togglePills('2')}>
                           <div className="subListMenu">
-                            Home
+                            News
                           </div>
                         </Link>
                       </li>
@@ -249,7 +261,7 @@ class App extends Component {
                         </a>
                       </li>
                       <li>
-                        <Link className="white-text" to='/about' onClick={this.togglePills('2')}>
+                        <Link className="white-text" to='/about' onClick={this.togglePills('3')}>
                           <div className="subListMenu">
                             About
                           </div>
@@ -271,11 +283,11 @@ class App extends Component {
                   <MDBCollapse id="Collapse2" isOpen={this.state.collapseID}>
                     <ul className='list-unstyled'>
                       <li>
-                        <MDBLink className="white-text" to='/' active={activeItemPills === '1'} onClick={this.togglePills('1')} link>
-                        <div className="subListMenu">
-                            Home
+                        <Link className="white-text" to='/academic_faculties' onClick={this.togglePills('4')}>
+                          <div className="subListMenu">
+                            Academic
                           </div>
-                        </MDBLink>
+                        </Link>
                       </li>
                       <li>
                         <a href='#!' className="white-text">
@@ -297,6 +309,49 @@ class App extends Component {
                             Link 4
                           </div>
                         </a>
+                      </li>
+                    </ul>
+                  </MDBCollapse>
+                </div>
+                <MDBBtn
+                  color="blue-darken-4"
+                  onClick={this.toggleCollapse("Collapse3")}
+                  style={{ width: '99%', backgroundColor: 'transparent' }}
+                  size="lg"
+                  className="btnMenu text-capitalize text-left pt-3 pb-3 pr-0 pl-2 mb-0 mr-0"
+                >
+                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    Contact
+                </MDBBtn>
+                <div>
+                  <MDBCollapse id="Collapse3" isOpen={this.state.collapseID}>
+                    <ul className='list-unstyled'>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('5')}>
+                          <div className="subListMenu">
+                            Where We Are
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('6')}>
+                          <div className="subListMenu">
+                            How To Visit Us
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('7')}>
+                          <div className="subListMenu">
+                            Departement Contact
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/contact_us' onClick={this.togglePills('8')}>
+                          <div className="subListMenu">
+                            Contact Us
+                          </div>
+                        </Link>
                       </li>
                     </ul>
                   </MDBCollapse>

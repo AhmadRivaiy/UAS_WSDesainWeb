@@ -1,71 +1,13 @@
 import React from 'react';
-import { HashRouter, Route, Switch, BrowserRouter } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { history } from './helpers';
 
 //Main
 import HomePage from './pages/home/HomePage';
 import AboutPage from './pages/about_us/AboutPage';
-
-import NavigationNavPage from './pages/NavigationNavPage';
-import FormsNavPage from './pages/FormsNavPage';
-import TablesNavPage from './pages/TablesNavPage';
-import AddonsNavPage from './pages/AddonsNavPage';
-import ModalsNavPage from './pages/ModalsNavPage';
-import AdvancedNavPage from './pages/AdvancedNavPage';
-import ComponentsNavPage from './pages/ComponentsNavPage';
-
-// FREE
-import AnimationPage from './pages/AnimationPage';
-import AlertPage from './pages/AlertPage';
-import ButtonPage from './pages/ButtonPage';
-import CSSNavPage from './pages/CSSNavPage';
-import TablePage from './pages/TablePage';
-import TableResponsivePage from './pages/TableResponsivePage';
-import TableScrollPage from './pages/TableScrollPage';
-import TableStylesPage from './pages/TableStylesPage';
-import BadgePage from './pages/BadgePage';
-import BreadcrumbPage from './pages/BreadcrumbPage';
-import FaPage from './pages/FaPage';
-import DatatablePage from './pages/DatatablePage';
-import DatatablePageV5 from './pages/DatatablePage-2';
-import DatatableApiPage from './pages/DatatableApiPage';
-import ModalPage from './pages/ModalPage';
-import ModalFormPage from './pages/ModalFormPage';
-import ModalExamplesPage from './pages/ModalExamplesPage';
-import ProgressPage from './pages/ProgressPage';
-import InputPage from './pages/InputPage';
-import MediaPage from './pages/MediaPage';
-import JumbotronPage from './pages/JumbotronPage';
-import CardsPage from './pages/CardsPage';
-import PaginationPage from './pages/PaginationPage';
-import PopoverPage from './pages/PopoverPage';
-import ListGroupPage from './pages/ListGroupPage';
-import CarouselPage from './pages/CarouselPage';
-import PanelPage from './pages/PanelPage';
-import CollapsePage from './pages/CollapsePage';
-import TooltipsPage from './pages/TooltipsPage';
-import FooterPage from './pages/FooterPage';
-import MasksPage from './pages/MasksPage';
-import DropdownPage from './pages/DropdownPage';
-import VideoCarouselPage from './pages/VideoCarouselPage';
-import HoverPage from './pages/HoverPage';
-import FormsPage from './pages/FormsPage';
-import ChartsPage from './pages/ChartsPage';
-import SearchPage from './pages/SearchPage';
-import ValidationPage from './pages/ValidationPage';
-import NavbarPage from './pages/NavbarPage';
-import IframePage from './pages/IframePage';
-import EdgeHeaderPage from './pages/EdgeHeaderPage';
-import SpinnerPage from './pages/SpinnerPage';
-import MasonryPage from './pages/MasonryPage';
-import ScrollBarPage from './pages/ScrollBarPage';
-import NavsPage from './pages/NavsPage';
-import TabsPage from './pages/TabsPage';
-import PillsPage from './pages/PillsPage';
-import NotificationPage from './pages/NotificationPage';
-import InputGroupPage from './pages/InputGroupPage';
-import TreeviewPage from './pages/TreeviewPage';
-import RatingPage from './pages/RatingPage';
+import NewsPage from './pages/events/NewsPage';
+import AcademicPage from './pages/academic/AcademicPage';
+import ContactPage from './pages/contact/ContactUsPage';
 
 import LoginPage from './pages/account/LoginPage';
 import RegisterPage from './pages/account/RegisterPage';
@@ -84,6 +26,10 @@ class Routes extends React.Component {
             <Route exact path='/' component={HomePage} />
             <Route exact path='/about' component={AboutPage} />
 
+            <Route exact path='/news' component={NewsPage} />
+            <Route exact path='/academic_faculties' component={AcademicPage} />
+            <Route exact path='/contact_us' component={ContactPage} />
+{/* 
             <Route exact path='/addons' component={AddonsNavPage} />
             <Route exact path='/advanced' component={AdvancedNavPage} />
             <Route exact path='/components' component={ComponentsNavPage} />
@@ -92,7 +38,7 @@ class Routes extends React.Component {
             <Route exact path='/modals' component={ModalsNavPage} />
             <Route exact path='/navigation' component={NavigationNavPage} />
             <Route exact path='/tables' component={TablesNavPage} />
-            {/* FREE */}
+
             <Route path='/addons/iframe' component={IframePage} />
             <Route path='/addons/edge-header' component={EdgeHeaderPage} />
             <Route path='/addons/notifications' component={NotificationPage} />
@@ -143,7 +89,7 @@ class Routes extends React.Component {
             <Route path='/tables/table-styles' component={TableStylesPage} />
             <Route path='/tables/datatable-api' component={DatatableApiPage} />
             <Route path='/tables/datatable' component={DatatablePage} />
-            <Route path='/tables/datatable-2' component={DatatablePageV5} />
+            <Route path='/tables/datatable-2' component={DatatablePageV5} /> */}
 
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterPage} />

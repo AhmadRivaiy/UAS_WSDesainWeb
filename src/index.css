@@ -338,16 +338,29 @@
 	align-items: center;
 }
 
+.subListMenu:hover {
+	background-color: rgba(203,203,203, 0.1);
+}
+
+.subListRightMenu {
+	height: 35px;
+	padding: 25px;
+	width: 100%;
+	font-size: medium;
+	align-items: center;
+	text-align: center;
+}
+
+.subListRightMenu:hover {
+	color: rgb(235, 176, 121);
+}
+
 .menuTopMobile {
 	padding-left: 30px;
 	padding-right: 30px;
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
-}
-
-.subListMenu:hover {
-	background-color: rgba(203,203,203, 0.1);
 }
 
 .titleFooter {
@@ -398,3 +411,16 @@
 	max-width: 350px;
 	opacity: 0.9;
 }
+
+.btnYellow {
+	background-color: #F8BC31;
+  }
+  
+  .btnOrange {
+	background-color:#F88E31;
+  }
+
+  .btnSky {
+	background-color: #83CEDE;
+  }
+  
