@@ -46,7 +46,7 @@ class AcademicPage extends React.Component {
                             <div className="col col-12 col-lg-6 btnPhone">
                                 <Link activeClass="active" to="moreWelcome" offset={-45} spy={true} smooth={true} duration={1200} >
                                     <div className="round-button">
-                                        <span><i class="fas fa-arrow-down cs_pointer fa-lg"></i></span>
+                                        <span><i className="fas fa-arrow-down cs_pointer fa-lg"></i></span>
                                     </div>
                                 </Link>
                             </div>
@@ -94,10 +94,10 @@ class AcademicPage extends React.Component {
                             </MDBCol>
                             <MDBCol md='12' className="btnGroup mt-5">
                                 <div className="btnBottomContent btnOrange btnNext">
-                                    <span><i class="fas fa-arrow-left cs_pointer fa-lg"></i></span> Curiculum
+                                    <span><i className="fas fa-arrow-left cs_pointer fa-lg"></i></span> Curiculum
                                 </div>
                                 <div className="btnBottomContent btnYellow btnNext">
-                                    <div>E-Learning</div> <span><i class="fas fa-arrow-right cs_pointer fa-lg"></i></span>
+                                    <div>E-Learning</div> <span><i className="fas fa-arrow-right cs_pointer fa-lg"></i></span>
                                 </div>
                             </MDBCol>
                         </MDBRow>

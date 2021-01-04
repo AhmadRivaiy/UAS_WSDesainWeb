@@ -22,6 +22,7 @@ import imgBuilding1 from '../../assets/building_i1920.png';
 import imgColor1 from '../../assets/color-1.jpg';
 import Typed from 'react-typed';
 import { Link, Element, Events } from 'react-scroll'
+import { Link as LinkTo } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 
 class HomePage extends React.Component {
@@ -320,10 +321,12 @@ class HomePage extends React.Component {
               </MDBAnimation>
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="rightMenu mt-2">
-                  <div className="overlayRightMenu">
-                    <div className="fontSubTitleRightContent">The Example Identity</div>
-                  </div>
-                  <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves />
+                  <LinkTo to='/about'>
+                    <div className="overlayRightMenu">
+                      <div className="fontSubTitleRightContent">The Example Identity</div>
+                    </div>
+                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves />
+                  </LinkTo>
                 </div>
               </MDBAnimation>
             </div>

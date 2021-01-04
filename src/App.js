@@ -9,14 +9,12 @@ import {
   MDBNavItem,
   MDBFooter,
   MDBNavLink,
-  MDBTooltip,
   MDBIcon, MDBView,
   MDBRow, MDBCol, MDBContainer,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
-  MDBLink,
   MDBAnimation
 } from 'mdbreact';
 import { HashRouter, BrowserRouter as Router, Link } from 'react-router-dom';
@@ -29,7 +27,7 @@ import { withTranslation } from 'react-i18next';
 import { slide as Menu } from 'react-burger-menu';
 import imgBurger from './assets/ic_menu.png';
 import imgLogo from './assets/img/home/logo.png';
-
+import ScrollToTop from './components/ScrollToTop';
 class App extends Component {
   state = {
     collapseID: '',
@@ -123,6 +121,7 @@ class App extends Component {
         <>
           <GlobalStyles />
           <Router basename="/UAS_WSDesainWeb">
+          <ScrollToTop/>
             <div className='flyout'>
               <MDBNavbar className="d-none d-lg-block" dark expand='md' scrolling={false} fixed='top' style={{ maxHeight: 50, backgroundColor: '#4C6789' }}>
                 <MDBCollapse id='mainNavbarCollapse' navbar className="container">
@@ -196,7 +195,7 @@ class App extends Component {
                 onOpen={() => this.setState({ sidebarOpen: true })}
                 onClose={() => this.setState({ sidebarOpen: false })}
                 isOpen={sidebarOpen}
-                customBurgerIcon={<span><i class="fas fa-bars fa-lg"></i></span>}
+                customBurgerIcon={<span><i className="fas fa-bars fa-lg"></i></span>}
                 pageWrapId={"page-wrap"}
                 disableAutoFocus
                 width={350}
@@ -384,10 +383,10 @@ class App extends Component {
 
                       <h5 className="titleFooter">CONNECT WITH US</h5>
                       <p>
-                        <a href="#"><span><i class="fab fa-twitter-square fa-2x"></i></span></a>
-                        <a href="#"><span><i class="fab fa-google-plus-square fa-2x ml-3"></i></span></a>
-                        <a href="#"><span><i class="fab fa-facebook-square fa-2x ml-3"></i></span></a>
-                        <a href="#"><span><i class="fas fa-share-alt-square fa-2x ml-3"></i></span></a>
+                        <a href="#"><span><i className="fab fa-twitter-square fa-2x"></i></span></a>
+                        <a href="#"><span><i className="fab fa-google-plus-square fa-2x ml-3"></i></span></a>
+                        <a href="#"><span><i className="fab fa-facebook-square fa-2x ml-3"></i></span></a>
+                        <a href="#"><span><i className="fas fa-share-alt-square fa-2x ml-3"></i></span></a>
                       </p>
                     </MDBCol>
                     <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start">

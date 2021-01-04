@@ -1,0 +1,21 @@
+{
+  "short_name": "Web Kampus",
+  "name": "websitekampus",
+  "description": "Official Website Kampus A",
+  "icons": [
+    {
+      "src": "development.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "development.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#000000"
+}
