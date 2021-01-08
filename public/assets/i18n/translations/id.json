@@ -1,7 +1,10 @@
 {
     "key":"initID",
+
+    "title.univ.label": "Universitas C.De Uyy",
+
     "home.nav.label": "Teras",
-    "news.nav.label": "Berita",
+    "news.nav.label": "Berita & Acara",
     "profile.nav.label": "Profil",
     "events.nav.label": "Kegiatan",
     "gallery.nav.label": "Galeri",
@@ -9,11 +12,51 @@
     "about.nav.label": "Tentang",
     "our_partner.nav.label": "Hubungan",
     "account.nav.label": "Akun",
-
+    "contact.nav.label": "Kontak",
+    "language.nav.label": "Bahasa",
     "account.form.label":"MASUK",
     
-    "more_about.btn.label": "LEBIH TENTANG ",
-    "quotes.card.home":"Pendidikan bukanlah mengisi ember saja, tapi menyalakan api.",
+    "news.sidemenu.label": "Berita",
+    "academic.sidemenu.label": "Akademik",
+    "about.sidemenu.label": "Tentang",
+    "about.sidemenu.sublabel": "Identitas Kampus",
 
-    "desk.home.paragraph":"Intervalos consistido id existencia superiores victorioso la chabacanos lo. Se integrante te levantarse orgullosos mi tu. Loco si el lune casi aire sano baja. Rusia tales polvo viuda tarde las asi mayor. Candilejas semejantes doscientos ano oro consistido hacendosas. Con aun fue parece sintio chiste. Me llamar ya pedido hombro. Fe sento manso todas ah deuda en usaba.<br/><br/>Temprano achaques nos mal los sollozos muestras cantidad. Ese marasmo sarebbe era tendida esa descaro. Fantasia cortesia hermanas mas provecho aquellos van. Aficiones guardando jugadores me en da monisimas almendras coincidio. Oh el saboreaba aficiones gentileza exageraba mentecato remontaba. Viviese referia no ve tenerme pediria holgada. Brillo ser dio partes oyendo. Eufemismo oh no ya conceptos guardando. Ahi fue ocho una pelo peor. Lo enferma si tablado firmado asiduos recurso pudiera. "
+    "more_about.btn.label": "LEBIH TENTANG ",
+    "discover.btn.label": "Temukan Hal Baru",
+    "tour.btn.label": "Ikuti Tur Sekolah",
+
+    "news.sidecontent.all":"Berita Terkait",
+    "upcomming.sidecontent.all":"Acara Yang Akan Datang",
+    "what.sidecontent.all":"Apa lagi Selanjutnya ?",
+
+    "title.page.news_page":"Berita Terbaru",
+    "title.page.academic":"Fakultas Akademik",
+    "title.page.contact_us":"Kontak Kami",
+    "title.page.about_us":"Identitas Kampus D.ce Uyy",
+
+    "title.sub_page.academic":"Penjelasan Mengenai Fakultas",
+    "title.electrical.academic":"Departemen<br/>Elektronika",
+    "title.rpl.academic":"Departement Informasi dan Komputer",
+    "title.mecatronic.academic":"Departemen Mekatronika",
+    "title.multimedia.academic":"Departement Multimedia",
+    "title.curiculum.rightMenu.academic":"Kurikulum",
+    
+    "label.form.title.contact_us":"Judul",
+    "label.form.name.contact_us":"Nama",
+    "label.form.subject.contact_us":"Subjek",
+    "label.form.message.contact_us":"Isi Pesan",
+    "label.form.policy.contact_us":"Data yang dikirimkan melalui formulir ini akan diakses, diproses dan disimpan sesuai dengan",
+    "label.link.policy.contact_us":"Keterangan Ketentuan Kampus",
+
+    "quotesOwner.card.home":"Beberapa tips belajar menjelang Ujian Akhir Nasional (UAN). Jangan pernah belajar “dadakan”.",
+    "quotesLeft.banner.home":"Politeknik Vokasi Terbaik di Indonesia",
+    "quotesRight.banner.home":"Politeknik Terbaik dari Terbaik",
+
+    "desk.paragraph.home":"Pendidikan yang paling utama bagi anak adalah pendidikan karakter. Dengan pendidikan karakter yang baik, si anak akan mempunyai pondasi karakter dan mental yang kuat. Belajar akan efektif kalau belajar kumpulan soal. Hal ini dapat dilakukan dengan cara menjawab soal-soal di buku kumpulan soal. Mencocokannya, lalu menilainya.<br/><br/>Orang tua dan guru pun bisa bekerja sama untuk membentuk karakter anak. Jika berhasil, orang tua dan guru akan lebih mudah dalam mentransfer ilmu maupun nasihatnya kepada anak. Jadi, pendidikan karakter harus diutamakan dalam pendidikan.",
+    "desk.paragraph2.home":"Apabila kita jarang mengonsumsi sayuran hijau bisa berakibat tidak baik bagi kesehatan. Pertama, kita rentan terkena penyakit. Kita bisa menderita anemia atau kekurangan darah. Karena kurangnya serat, kita juga mudah mengalami sembelit. Ternyata, jarang mengonsumsi sayuran hijau bisa berbahaya bagi tubuh kita.<br/><br/>Eceng gondok dianggap sebagai gulma yang dapat merusak lingkungan perairan. Eceng gondok dengan mudah menyebar melalui saluran air.<br/>Bagi masyarakat di sekitar pinggiran sungai, eceng gondok adalah tanaman parasit yang hanya mengotori sungai. Eceng gondok dapat menyebabkan sungai menjadi tersumbat atau meluap karena ditumbuhi eceng gondok terlalu banyak. Masyarakat di sekitar pinggiran danau juga menganggap eceng gondok adalah tanaman pengganggu yang menghalangi aktivitas mereka di danau. Tak salah jika eceng gondok dicap sebagai tanaman perusak lingkungan perairan.",
+
+    "quotes.footer.footer": "Belajar akan efektif kalau belajar kumpulan soal. Hal ini dapat dilakukan dengan cara menjawab soal-soal di buku kumpulan soal.",
+    "title.content.footer":"Hubungan",
+    "title.contact.footer":"KONTAK KAMI",
+    "title.connect.footer":"IKUTI KAMI"
 }

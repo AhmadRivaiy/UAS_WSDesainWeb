@@ -97,9 +97,9 @@ class App extends Component {
     localStorage.setItem('is_lang_now', JSON.stringify(data));
     i18n.changeLanguage(index);
     const locationNow = window.location.pathname;
-    if (!notReload[locationNow]) {
-      window.location.reload()
-    }
+    // if (!notReload[locationNow]) {
+    //   window.location.reload()
+    // }
     this.navLanguage();
   }
 
@@ -123,7 +123,7 @@ class App extends Component {
           <Router basename="/UAS_WSDesainWeb">
           <ScrollToTop/>
             <div className='flyout'>
-              <MDBNavbar className="d-none d-lg-block" dark expand='md' scrolling={false} fixed='top' style={{ maxHeight: 50, backgroundColor: '#4C6789' }}>
+              <MDBNavbar className="d-none d-lg-block navbarStyle" dark expand='md' scrolling={false} fixed='top'>
                 <MDBCollapse id='mainNavbarCollapse' navbar className="container">
                   <MDBNavbarNav right>
                     <MDBNavItem className="d-block d-md-none">
@@ -156,7 +156,7 @@ class App extends Component {
                             <MDBIcon icon="language" size="1x" />
                           </MDBDropdownToggle>
                           <MDBDropdownMenu basic>
-                            <MDBDropdownItem header>Language</MDBDropdownItem>
+                            <MDBDropdownItem header>{t('language.nav.label')}</MDBDropdownItem>
                             <MDBDropdownItem divider />
                             <MDBDropdownItem active={id} onClick={() => this.chooseLanguage('id', '0')}>Indonesia</MDBDropdownItem>
                             <MDBDropdownItem active={en} onClick={() => this.chooseLanguage('en', '1')}>English</MDBDropdownItem>
@@ -172,7 +172,7 @@ class App extends Component {
                   </MDBNavbarNav>
                 </MDBCollapse>
               </MDBNavbar>
-              <MDBNavbar className="d-block d-lg-none" dark expand='md' scrolling={false} fixed='top' style={{ backgroundColor: '#4C6789' }}>
+              <MDBNavbar className="d-block d-lg-none navbarStyleApp" dark expand='md' scrolling={false} fixed='top'>
                 <div className="row">
                   <div className="col col-2">
                     <MDBNavbarToggler
@@ -203,7 +203,7 @@ class App extends Component {
               >
                 <div className="d-flex flex-column">
                   <img src={imgLogo} style={{ maxWidth: 150 }} className="img-fluid align-self-center" alt="" />
-                  <h3 className="text-center mt-4 white-text ">Empowers To Educate</h3>
+                  <h3 className="text-center mt-4 white-text ">{t('title.univ.label')}</h3>
                 </div>
                 <hr style={{ border: '1', borderColor: 'white' }}/>
                 <div className="flex-column d-block d-lg-none">
@@ -223,7 +223,7 @@ class App extends Component {
                     size="lg"
                     className="btnMenu text-capitalize text-left pt-3 pb-3 pl-2 pr-0 mb-0 mr-0"
                   >
-                    <i className="fas fa-home" />    Home
+                    <i className="fas fa-home" />    {t('home.nav.label')}
                   </MDBBtn>
                 </Link>
                 <MDBBtn
@@ -233,7 +233,7 @@ class App extends Component {
                   size="lg"
                   className="btnMenu text-capitalize text-left pt-3 pb-3 pl-2 pr-0 mb-0 mr-0"
                 >
-                  <i className={collapseID == "Collapse1" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    News & Events
+                  <i className={collapseID == "Collapse1" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    {t('news.nav.label')}
                 </MDBBtn>
                 <div>
                   <MDBCollapse id="Collapse1" isOpen={this.state.collapseID}>
@@ -241,7 +241,7 @@ class App extends Component {
                       <li>
                         <Link className="white-text" to='/news' onClick={this.togglePills('2')}>
                           <div className="subListMenu">
-                            News
+                            {t('news.sidemenu.label')}
                           </div>
                         </Link>
                       </li>
@@ -260,11 +260,11 @@ class App extends Component {
                         </a>
                       </li>
                       <li>
-                        <Link className="white-text" to='/about' onClick={this.togglePills('3')}>
+                        <a href='#!' className="white-text">
                           <div className="subListMenu">
-                            About
+                            Link 4
                           </div>
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </MDBCollapse>
@@ -276,7 +276,7 @@ class App extends Component {
                   size="lg"
                   className="btnMenu text-capitalize text-left pt-3 pb-3 pr-0 pl-2 mb-0 mr-0"
                 >
-                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    Academic
+                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    {t('academic.nav.label')}
                 </MDBBtn>
                 <div>
                   <MDBCollapse id="Collapse2" isOpen={this.state.collapseID}>
@@ -319,7 +319,7 @@ class App extends Component {
                   size="lg"
                   className="btnMenu text-capitalize text-left pt-3 pb-3 pr-0 pl-2 mb-0 mr-0"
                 >
-                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    Contact
+                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    {t('contact.nav.label')}
                 </MDBBtn>
                 <div>
                   <MDBCollapse id="Collapse3" isOpen={this.state.collapseID}>
@@ -355,6 +355,49 @@ class App extends Component {
                     </ul>
                   </MDBCollapse>
                 </div>
+                <MDBBtn
+                  color="blue-darken-4"
+                  onClick={this.toggleCollapse("Collapse4")}
+                  style={{ width: '99%', backgroundColor: 'transparent' }}
+                  size="lg"
+                  className="btnMenu text-capitalize text-left pt-3 pb-3 pr-0 pl-2 mb-0 mr-0"
+                >
+                  <i className={collapseID == "Collapse2" ? "fa fa-angle-down" : "fa fa-angle-down fa-rotate-270"} />    {t('about.sidemenu.label')}
+                </MDBBtn>
+                <div>
+                  <MDBCollapse id="Collapse4" isOpen={this.state.collapseID}>
+                    <ul className='list-unstyled'>
+                      <li>
+                        <Link className="white-text" to='/about' onClick={this.togglePills('3')}>
+                          <div className="subListMenu">
+                            {t('about.sidemenu.sublabel')}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('6')}>
+                          <div className="subListMenu">
+                            Link 2
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('7')}>
+                          <div className="subListMenu">
+                            Link 3
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="white-text" to='/' onClick={this.togglePills('8')}>
+                          <div className="subListMenu">
+                            Link 4
+                          </div>
+                        </Link>
+                      </li>
+                    </ul>
+                  </MDBCollapse>
+                </div>
               </Menu>
               <MDBAnimation type="fadeIn" duration="2s">
                 <main id="page-wrap">
@@ -368,20 +411,20 @@ class App extends Component {
                       <img src={imgLogo} style={{ maxWidth: 120 }} className="img-fluid align-self-center" alt="" />
                       <br />
                       <h4>
-                        Empowers To Educate
+                        {t('title.univ.label')}
                       </h4>
                     </MDBCol>
                     <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start mb-3">
                       <h2 className="titleFooter mb-3">
-                        Get In Touch
+                        {t('title.content.footer')}
                       </h2>
-                      <h5 className="titleFooter">CONTACT US</h5>
+                      <h5 className="titleFooter">{t('title.contact.footer')}</h5>
                       <p>Kota, Kabupaten, Provinsi</p>
 
                       <h5 className="titleFooter">EMAIL</h5>
                       <p>example@email.ac.id</p>
 
-                      <h5 className="titleFooter">CONNECT WITH US</h5>
+                      <h5 className="titleFooter">{t('title.connect.footer')}</h5>
                       <p>
                         <a href="#"><span><i className="fab fa-twitter-square fa-2x"></i></span></a>
                         <a href="#"><span><i className="fab fa-google-plus-square fa-2x ml-3"></i></span></a>
@@ -391,7 +434,7 @@ class App extends Component {
                     </MDBCol>
                     <MDBCol md='4' className="d-flex flex-column align-items-center align-items-md-start">
                       <p style={{ fontSize: '1em', textAlign: 'center' }}>
-                        "QUOTES OR HISTORY about THE COLLEGE Sed pretium nunc leo, eu ullamcorper velit sagittis id. Nam lobortis leo eget imperdiet commodo."
+                        "{t('quotes.footer.footer')}"
                       </p>
                       <h5 className='title d-flex justify-content-center justify-content-md-start'>Handy Links</h5>
                       <div className="row">

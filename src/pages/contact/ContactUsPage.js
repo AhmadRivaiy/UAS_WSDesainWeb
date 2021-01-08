@@ -41,7 +41,7 @@ class ContactUsPage extends React.Component {
                     <div className="contents">
                         <div className="row align-items-end" style={{ height: '90vh' }}>
                             <div className="col col-12 col-lg-6 d-flex titleHeaderPhone">
-                                Contact Us
+                                {t('title.page.contact_us')}
                             </div>
                             <div className="col col-12 col-lg-6 btnPhone">
                                 <Link activeClass="active" to="moreWelcome" offset={-45} spy={true} smooth={true} duration={1200} >
@@ -58,25 +58,25 @@ class ContactUsPage extends React.Component {
                         <MDBRow>
                             <MDBCol md='12' className='mt-4'>
                                 <p dangerouslySetInnerHTML={
-                                    { __html: t('desk.home.paragraph') }
+                                    { __html: t('desk.paragraph.home')}
                                 } className="textContent" />
                                 <form>
                                     <MDBRow>
                                         <MDBCol sm="12" md="5" className="m-2">
                                             <label htmlFor="titleContact" className="labelFormContact">
-                                                Title*
+                                                {t('label.form.title.contact_us')}*
                                             </label>
                                             <input type="text" id="titleContact" className="form-control " />
                                         </MDBCol>
                                         <MDBCol sm="12" md="5" className="m-2">
                                             <label htmlFor="nameContact" className="labelFormContact">
-                                                Name*
+                                                {t('label.form.name.contact_us')}*
                                             </label>
                                             <input type="text" id="nameContact" className="form-control" />
                                         </MDBCol>
                                         <MDBCol sm="12" md="5" className="m-2">
                                             <label htmlFor="subjectContact" className="labelFormContact">
-                                                Subject*
+                                                {t('label.form.subject.contact_us')}*
                                             </label>
                                             <input type="text" id="subjectContact" className="form-control" />
                                         </MDBCol>
@@ -88,17 +88,16 @@ class ContactUsPage extends React.Component {
                                         </MDBCol>
                                         <MDBCol sm="12" md="11" className="m-2">
                                             <label htmlFor="defaultFormContactMessageEx" className="labelFormContact">
-                                                Message*
+                                                {t('label.form.message.contact_us')}*
                                             </label>
                                             <textarea type="text" id="defaultFormContactMessageEx" className="form-control" rows="6" />
                                         </MDBCol>
                                         <MDBCol sm="12" md="12" className="m-2">
-                                            <p>Data submitted through this form will be accessed, processed and retained in accordance with the<br/><br/><LinkTo to="#">College’s Privacy Notice</LinkTo></p>
-                                            
+                                            <p>{t('label.form.policy.contact_us')}<br/><LinkTo to="#">{t('label.link.policy.contact_us')}</LinkTo></p>
                                         </MDBCol>
                                         <MDBCol sm="12" md="3" className="ml-2">
                                             <div className='d-flex flex-direction-row justify-content-space-between align-items-center verifyBox'>
-                                                <input type="checkbox" id="verifyCheck" className="form-control"  style={{ maxWidth: 45 }}/>
+                                                <input type="checkbox" id="verifyCheck" className="form-control" style={{ maxWidth: 45 }}/>
                                                 <p className="h5 pl-2 mt-2 titleVerify">I'am not a robot</p>
                                             </div>
                                         </MDBCol>
@@ -127,23 +126,23 @@ class ContactUsPage extends React.Component {
                         <div className="bgRightMenu">
                             <div className="d-flex flex-column align-items-center">
                                 <img className="img-fluid m-4 imgRightMenu" src="/assets/img/logow.png" alt="" />
-                                <p className="titleRightMenu">The Example College</p>
+                                <p className="titleRightMenu">{t('title.univ.label')}</p>
                                 <div className="d-flex ">
                                     <ul className="breadcrumb">
                                         <li>
                                             <LinkTo to='/'>
-                                                Home
+                                                {t('home.nav.label')}
                                             </LinkTo>
                                         </li>
                                         <li>
                                             <LinkTo to='/contact_us'>
-                                                Contact
+                                                {t('contact.nav.label')}
                                             </LinkTo>
                                         </li>
-                                        <li>Contact Us</li>
+                                        <li>{t('title.page.contact_us')}</li>
                                     </ul>
                                 </div>
-                                <p className="subTitleRightMenu">Contact Us</p>
+                                <p className="subTitleRightMenu">{t('title.page.contact_us')}</p>
                                 <ul className='list-unstyled text-center'>
                                     <li>
                                         <LinkTo className="white-text" to='/'>
@@ -179,7 +178,7 @@ class ContactUsPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Related News</p>
+                                    <p className="fontTitleRightContentPrim">{t('news.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -195,7 +194,7 @@ class ContactUsPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Upcomming Events</p>
+                                    <p className="fontTitleRightContentPrim">{t('upcomming.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -211,7 +210,7 @@ class ContactUsPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">What's Next ?</p>
+                                    <p className="fontTitleRightContentPrim">{t('what.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -235,7 +234,7 @@ class ContactUsPage extends React.Component {
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="rightMenu mt-2">
                                     <div className="overlayRightMenu">
-                                        <div className="fontSubTitleRightContent">The Example Identity</div>
+                                        <div className="fontSubTitleRightContent">{t('about.sidemenu.sublabel')}</div>
                                     </div>
                                     <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves alt="" />
                                 </div>

@@ -242,6 +242,15 @@
 	align-items: center;
 }
 
+.navbarStyle {
+	max-height: 50px;
+	background-color: #4C6789;
+}
+
+.navbarStyleApp {
+	background-color: #4C6789;
+}
+
 .bm-burger-button {
 	position: fixed;
 	width: 60px;

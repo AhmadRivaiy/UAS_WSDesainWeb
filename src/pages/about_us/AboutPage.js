@@ -42,8 +42,8 @@ class AboutPage extends React.Component {
                     <div className="contents">
                         <div className="row align-items-end" style={{ height: '90vh' }}>
                             <div className="col col-12 col-lg-6 d-flex titleHeaderPhone">
-                                The Example College Identity
-                                </div>
+                                {t('title.page.about_us')}
+                            </div>
                             <div className="col col-12 col-lg-6 btnPhone">
                                 <Link activeClass="active" to="moreWelcome" offset={-45} spy={true} smooth={true} duration={1200} >
                                     <div className="round-button">
@@ -71,7 +71,7 @@ class AboutPage extends React.Component {
                                         </MDBCol>
                                         <br />
                                         <p dangerouslySetInnerHTML={
-                                            { __html: t('desk.home.paragraph') }
+                                            { __html: t('desk.paragraph.home') }
                                         } className="textContent" />
                                     </MDBCol>
                                     <MDBCol md="12">
@@ -80,7 +80,7 @@ class AboutPage extends React.Component {
                                     <MDBCol md="12">
                                         <br />
                                         <p dangerouslySetInnerHTML={
-                                            { __html: t('desk.home.paragraph') }
+                                            { __html: t('desk.paragraph.home') }
                                         } className="textContent" />
                                     </MDBCol>
                                 </MDBRow>
@@ -96,23 +96,23 @@ class AboutPage extends React.Component {
                         <div className="bgRightMenu">
                             <div className="d-flex flex-column align-items-center">
                                 <img className="img-fluid m-4 imgRightMenu" src="/assets/img/logow.png" alt=""/>
-                                <p className="titleRightMenu">The Example College</p>
+                                <p className="titleRightMenu">{t('title.univ.label')}</p>
                                 <div className="d-flex ">
                                     <ul className="breadcrumb">
                                         <li>
                                             <LinkTo to='/'>
-                                                Home
+                                                {t('home.nav.label')}
                                             </LinkTo>
                                         </li>
                                         <li>
                                             <LinkTo to='/about'>
-                                                About
+                                                {t('contact.nav.label')}
                                             </LinkTo>
                                         </li>
-                                        <li>The Example College</li>
+                                        <li>{t('title.page.about_us')}</li>
                                     </ul>
                                 </div>
-                                <p className="subTitleRightMenu">About</p>
+                                <p className="subTitleRightMenu">{t('about.sidemenu.sublabel')}</p>
                                 <ul className='list-unstyled'>
                                     <li>
                                         <a href='#!' className="white-text">
@@ -138,7 +138,7 @@ class AboutPage extends React.Component {
                                     <li>
                                         <LinkTo className="white-text" to='/about'>
                                             <div className="subListRightMenu">
-                                                About
+                                                {t('about.sidemenu.label')}
                                             </div>
                                         </LinkTo>
                                     </li>
@@ -148,7 +148,7 @@ class AboutPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Related News</p>
+                                    <p className="fontTitleRightContentPrim">{t('news.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>

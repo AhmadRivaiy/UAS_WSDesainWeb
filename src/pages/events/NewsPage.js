@@ -32,6 +32,7 @@ class NewsPage extends React.Component {
 
     render() {
         const { t } = this.props;
+        const newsCount = [1, 2, 3, 4, 5, 6];
         return (
             <>
                 <header className="mt-2">
@@ -41,7 +42,7 @@ class NewsPage extends React.Component {
                     <div className="contents">
                         <div className="row align-items-end" style={{ height: '90vh' }}>
                             <div className="col col-12 col-lg-6 d-flex titleHeaderPhone">
-                                News
+                                {t('news.sidemenu.label')}
                             </div>
                             <div className="col col-12 col-lg-6 btnPhone">
                                 <Link activeClass="active" to="moreWelcome" offset={-45} spy={true} smooth={true} duration={1200} >
@@ -57,129 +58,41 @@ class NewsPage extends React.Component {
                     <MDBContainer>
                         <MDBRow>
                             <MDBCol md='12' className='mt-4'>
-                                <p className="titleContent">Lates News</p>
+                                <p className="titleContent">{t('title.page.news_page')}</p>
                                 <p dangerouslySetInnerHTML={
-                                    { __html: t('desk.home.paragraph') }
+                                    { __html: t('desk.paragraph.home') }
                                 } className="textContent" />
-                                <MDBRow>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                {newsCount.map((newsCount) =>
+                                    <MDBRow className="mt-4">
+                                        <MDBCol sm="12" md="4">
+                                            <div className="d-flex justify-content-center align-items-center newsContent">
+                                                <div className="overlayNewsContent">
+                                                    <div className="fontTitleRightContent">10 Nov 2020</div>
+                                                    <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                                </div>
+                                                <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
                                             </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                        </MDBCol>
+                                        <MDBCol sm="12" md="4">
+                                            <div className="d-flex justify-content-center align-items-center newsContent">
+                                                <div className="overlayNewsContent">
+                                                    <div className="fontTitleRightContent">10 Nov 2020</div>
+                                                    <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                                </div>
+                                                <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
                                             </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                        </MDBCol>
+                                        <MDBCol sm="12" md="4">
+                                            <div className="d-flex justify-content-center align-items-center newsContent">
+                                                <div className="overlayNewsContent">
+                                                    <div className="fontTitleRightContent">10 Nov 2020</div>
+                                                    <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                                </div>
+                                                <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
                                             </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                </MDBRow>
-
-                                <MDBRow className="mt-4">
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                </MDBRow>
-
-                                <MDBRow className="mt-4">
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                </MDBRow>
-
-                                <MDBRow className="mt-4">
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                    <MDBCol sm="12" md="4">
-                                        <div className="d-flex justify-content-center align-items-center newsContent">
-                                            <div className="overlayNewsContent">
-                                                <div className="fontTitleRightContent">10 Nov 2020</div>
-                                                <div className="fontSubTitleRightContent">NEW BUILDING</div>
-                                            </div>
-                                            <MDBCardImage className="img-fluid imgNewsContent" src="/assets/img/building.png" waves alt=""  />
-                                        </div>
-                                    </MDBCol>
-                                </MDBRow>
+                                        </MDBCol>
+                                    </MDBRow>
+                                )}
                             </MDBCol>
                             <MDBCol md='12' className="d-flex d-block d-lg-none d-md-none">
                                 <div className="pagination p1 d-flex justify-content-center align-items-center mt-5">
@@ -215,23 +128,23 @@ class NewsPage extends React.Component {
                         <div className="bgRightMenu">
                             <div className="d-flex flex-column align-items-center">
                                 <img className="img-fluid m-4 imgRightMenu" src="/assets/img/logow.png" alt=""/>
-                                <p className="titleRightMenu">The Example College</p>
+                                <p className="titleRightMenu">{t('title.univ.label')}</p>
                                 <div className="d-flex ">
                                     <ul className="breadcrumb">
                                         <li>
                                             <LinkTo to='/'>
-                                                Home
+                                                {t('home.nav.label')}
                                             </LinkTo>
                                         </li>
                                         <li>
                                             <LinkTo to='/news'>
-                                                News
+                                                {t('news.sidemenu.label')}
                                             </LinkTo>
                                         </li>
-                                        <li>Lates News</li>
+                                        <li>{t('title.page.news_page')}</li>
                                     </ul>
                                 </div>
-                                <p className="subTitleRightMenu">News</p>
+                                <p className="subTitleRightMenu">{t('news.sidemenu.label')}</p>
                                 <ul className='list-unstyled text-center'>
                                     <li>
                                         <a href='#!' className="white-text">
@@ -257,7 +170,7 @@ class NewsPage extends React.Component {
                                     <li>
                                         <LinkTo className="white-text" to='/news'>
                                             <div className="subListRightMenu">
-                                                Old News
+                                                Link 4
                                             </div>
                                         </LinkTo>
                                     </li>
@@ -267,7 +180,7 @@ class NewsPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Upcomming Events</p>
+                                    <p className="fontTitleRightContentPrim">{t('upcomming.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -283,7 +196,7 @@ class NewsPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">What's Next ?</p>
+                                    <p className="fontTitleRightContentPrim">{t('what.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -307,7 +220,7 @@ class NewsPage extends React.Component {
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="rightMenu mt-2">
                                     <div className="overlayRightMenu">
-                                        <div className="fontSubTitleRightContent">The Example Identity</div>
+                                        <div className="fontSubTitleRightContent">{t('about.sidemenu.sublabel')}</div>
                                     </div>
                                     <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves alt=""  />
                                 </div>

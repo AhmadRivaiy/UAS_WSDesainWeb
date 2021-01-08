@@ -41,7 +41,7 @@ class AcademicPage extends React.Component {
                     <div className="contents">
                         <div className="row align-items-end" style={{ height: '90vh' }}>
                             <div className="col col-12 col-lg-6 d-flex titleHeaderPhone">
-                                Academic Faculties
+                                {t('title.page.academic')}
                             </div>
                             <div className="col col-12 col-lg-6 btnPhone">
                                 <Link activeClass="active" to="moreWelcome" offset={-45} spy={true} smooth={true} duration={1200} >
@@ -57,36 +57,36 @@ class AcademicPage extends React.Component {
                     <MDBContainer>
                         <MDBRow>
                             <MDBCol md='12' className='mt-4'>
-                                <p className="titleContent">Penjelasan Mengenai<br/>Adanya Fakultas Tersebut</p>
+                                <p className="titleContent">{t('title.sub_page.academic')}</p>
                                 <p dangerouslySetInnerHTML={
-                                    { __html: t('desk.home.paragraph') }
+                                    { __html: t('desk.paragraph.home') }
                                 } className="textContent" />
                                 <MDBRow>
                                     <MDBCol sm="12" md="5" className="m-4">
                                         <div className="d-flex justify-content-center align-items-center anContent">
                                             <div className="overlayContent"></div>
-                                            <div className="titleCardContent fontSubTitleRightContent">Electrical<br/>Departement</div>
+                                            <div className="titleCardContent fontSubTitleRightContent"><span dangerouslySetInnerHTML={{ __html: t('title.electrical.academic') }} /></div>
                                             <img className="img-fluid imgAnContent" src="/assets/img/electrical.png" width="100%" alt="" />
                                         </div>
                                     </MDBCol>
                                     <MDBCol sm="12" md="5" className="m-4">
                                         <div className="d-flex justify-content-center align-items-center anContent">
                                             <div className="overlayContent"></div>
-                                            <div className="titleCardContent fontSubTitleRightContent">Informatic and Computer Departement</div>
+                                            <div className="titleCardContent fontSubTitleRightContent"><span dangerouslySetInnerHTML={{ __html: t('title.rpl.academic') }} /></div>
                                             <img className="img-fluid imgAnContent" src="/assets/img/coding.png" width="100%" alt=""  />
                                         </div>
                                     </MDBCol>
                                     <MDBCol sm="12" md="5" className="m-4">
                                         <div className="d-flex justify-content-center align-items-center anContent">
                                             <div className="overlayContent"></div>
-                                            <div className="titleCardContent fontSubTitleRightContent">Mekatronic Energy Departement</div>
+                                            <div className="titleCardContent fontSubTitleRightContent"><span dangerouslySetInnerHTML={{ __html: t('title.mecatronic.academic') }} /></div>
                                             <img className="img-fluid imgAnContent" src="/assets/img/mekatronik.png" width="100%" alt=""  />
                                         </div>
                                     </MDBCol>
                                     <MDBCol sm="12" md="5" className="m-4">
                                         <div className="d-flex justify-content-center align-items-center anContent">
                                             <div className="overlayContent"></div>
-                                            <div className="titleCardContent fontSubTitleRightContent">Multimedia Departement</div>
+                                            <div className="titleCardContent fontSubTitleRightContent"><span dangerouslySetInnerHTML={{ __html: t('title.multimedia.academic') }} /></div>
                                             <img className="img-fluid imgAnContent" src="/assets/img/multimedia.png" width="100%" alt=""  />
                                         </div>
                                     </MDBCol>
@@ -94,7 +94,7 @@ class AcademicPage extends React.Component {
                             </MDBCol>
                             <MDBCol md='12' className="btnGroup mt-5">
                                 <div className="btnBottomContent btnOrange btnNext">
-                                    <span><i className="fas fa-arrow-left cs_pointer fa-lg"></i></span> Curiculum
+                                    <span><i className="fas fa-arrow-left cs_pointer fa-lg"></i></span> {t('title.curiculum.rightMenu.academic')}
                                 </div>
                                 <div className="btnBottomContent btnYellow btnNext">
                                     <div>E-Learning</div> <span><i className="fas fa-arrow-right cs_pointer fa-lg"></i></span>
@@ -106,28 +106,28 @@ class AcademicPage extends React.Component {
                         <div className="bgRightMenu">
                             <div className="d-flex flex-column align-items-center">
                                 <img className="img-fluid m-4 imgRightMenu" src="/assets/img/logow.png" alt=""  />
-                                <p className="titleRightMenu">The Example College</p>
+                                <p className="titleRightMenu">{t('title.univ.label')}</p>
                                 <div className="d-flex ">
                                     <ul className="breadcrumb">
                                         <li>
                                             <LinkTo to='/'>
-                                                Home
+                                                {t('home.nav.label')}
                                             </LinkTo>
                                         </li>
                                         <li>
                                             <LinkTo to='/academic_faculties'>
-                                                Academic
+                                                {t('academic.sidemenu.label')}
                                             </LinkTo>
                                         </li>
-                                        <li>Lates News</li>
+                                        <li>{t('title.page.academic')}</li>
                                     </ul>
                                 </div>
-                                <p className="subTitleRightMenu">News</p>
+                                <p className="subTitleRightMenu">{t('academic.sidemenu.label')}</p>
                                 <ul className='list-unstyled text-center'>
                                     <li>
                                         <LinkTo className="white-text" to='/'>
                                             <div className="subListRightMenu">
-                                                Curiculum
+                                                {t('title.curiculum.rightMenu.academic')}
                                             </div>
                                         </LinkTo>
                                     </li>
@@ -158,7 +158,7 @@ class AcademicPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Related News</p>
+                                    <p className="fontTitleRightContentPrim">{t('news.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ class AcademicPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">Upcomming Events</p>
+                                    <p className="fontTitleRightContentPrim">{t('upcomming.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@ class AcademicPage extends React.Component {
                         <div className="mt-4">
                             <MDBAnimation reveal type='fadeInRight'>
                                 <div className="d-flex flex-row">
-                                    <p className="fontTitleRightContentPrim">What's Next ?</p>
+                                    <p className="fontTitleRightContentPrim">{t('what.sidecontent.all')}</p>
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>

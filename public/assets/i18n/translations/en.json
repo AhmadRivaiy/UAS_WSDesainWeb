@@ -1,7 +1,10 @@
 {
     "key":"initEN",
+
+    "title.univ.label": "Example Unversity",
+
     "home.nav.label": "Home",
-    "news.nav.label": "News",
+    "news.nav.label": "News & Events",
     "profile.nav.label": "Profile",
     "events.nav.label": "Events",
     "gallery.nav.label": "Gallery",
@@ -9,11 +12,52 @@
     "about.nav.label": "About",
     "our_partner.nav.label": "Our Partner",
     "account.nav.label": "Account",
-
+    "contact.nav.label": "Contact",
+    "language.nav.label": "language",
     "account.form.label":"SIGN IN",
 
-    "more_about.btn.label": "The Master's Welcome",
-    "quotes.card.home":"Education is not the filling of a pail, but the lighting of a fire.",
+    "news.sidemenu.label": "News",
+    "academic.sidemenu.label": "Akademik",
+    "about.sidemenu.label": "About",
+    "about.sidemenu.sublabel": "The D.Ce Uyy Identity",
 
-    "desk.home.paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit tellus a ex sollicitudin, interdum tempus leo gravida. Phasellus dapibus a ante eu convallis. Maecenas aliquam enim in massa facilisis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut libero ultricies, blandit arcu vitae, iaculis urna. Donec mattis vel turpis et molestie. Aliquam dapibus justo quam, ut consectetur turpis cursus consectetur. Aenean a pellentesque purus, quis mattis risus. Nulla facilisi. Etiam vitae felis vel neque vestibulum posuere. Nulla facilisi. Curabitur tincidunt fermentum ornare. Curabitur quis ex vel sem venenatis interdum at et diam. Sed sed lectus felis. <br/><br/>Sed vel nisi ac dui tempor pulvinar. Aenean pharetra sit amet magna vel maximus. Integer ut tellus nisl. Suspendisse in odio urna. Nullam tincidunt placerat bibendum. Mauris sit amet aliquet magna. Vestibulum blandit mattis rhoncus. Pellentesque interdum laoreet lacus, vel lobortis nibh suscipit at. Nam venenatis vitae nunc sed malesuada. Praesent eleifend efficitur dignissim. Sed posuere diam mauris, sit amet rutrum turpis pellentesque id. Nam eu consectetur ex, at fermentum tortor."
+    "more_about.btn.label": "The Master's Welcome",
+    "discover.btn.label": "Discover What's On",
+    "tour.btn.label": "Take The School Tour",
+
+    "news.sidecontent.all":"Related News",
+    "upcomming.sidecontent.all":"Upcomming Events",
+    "what.sidecontent.all":"What's Next ?",
+
+    "title.page.news_page":"Lates News",
+    "title.page.academic":"Academic Faculties",
+    "title.page.contact_us":"Contact Us",
+    "title.page.about_us":"The Example College Identity",
+
+    "title.sub_page.academic":"About Our Faculties",
+    "title.electrical.academic":"Electrical<br/>Departement",
+    "title.rpl.academic":"Informatic and Computer Departement",
+    "title.mecatronic.academic":"Mekatronic Energy Departement",
+    "title.multimedia.academic":"Multimedia Departement",
+    "title.curiculum.rightMenu.academic":"Curiculum",
+
+    "label.form.title.contact_us":"Title",
+    "label.form.name.contact_us":"Name",
+    "label.form.subject.contact_us":"Subject",
+    "label.form.message.contact_us":"Message",
+    "label.form.policy.contact_us":"Data submitted through this form will be accessed, processed and retained in accordance with the",
+    "label.link.policy.contact_us":"College’s Privacy Notice",
+
+    "quotesLeft.banner.home":"The Best Polytechnic Vocational in Indonesia",
+    "quotesRight.banner.home":"Best of the Best Polytechnics",
+    "quotesOwner.card.home":"Education is not the filling of a pail, but the lighting of a fire.",
+
+    "desk.paragraph.home":"The most important education for children is character education. With good character education, the child will have a strong character and mental foundation. Learning will be effective if you learn a collection of questions. This can be done by answering the questions in the question collection book. Match it, then judge it. <br/> <br/> Parents and teachers can work together to shape children's character. If successful, parents and teachers will find it easier to transfer knowledge and advice to children. So, character education must be prioritized in education.",
+    "desk.paragraph2.home":"If we rarely eat green vegetables it can be bad for health. First, we are susceptible to disease. We can suffer from anemia or lack of blood. Due to a lack of fiber, we are also prone to constipation. It turns out, rarely consuming green vegetables can be harmful to our bodies. <br/> <br/> Water hyacinth is considered a weed that can damage the aquatic environment. Water hyacinth easily spreads through waterways. <br/> For the people around the riverbanks, water hyacinth is a parasitic plant that only pollutes the river. Water hyacinths can cause rivers to become clogged or overflow because they are overgrown with water hyacinths. People around the edge of the lake also consider water hyacinth as a nuisance plant that hinders their activities in the lake. Nothing wrong with water hyacinth is labeled as a plant that destroys the aquatic environment.",
+
+    "quotes.footer.footer":"Learning will be effective if you learn a collection of questions. This can be done by answering the questions in the question collection book.",
+    "title.content.footer":"Get In Touch",
+    "title.contact.footer":"CONTACT US",
+    "title.connect.footer":"CONNECT WITH US"
+
 }

@@ -143,7 +143,7 @@ class HomePage extends React.Component {
             <div className="row">
               <div className="col d-flex flex-column" style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <img src="/assets/img/logow.png" style={{ maxWidth: 280, marginTop: '65px' }} className="img-fluid align-self-center" alt="" />
-                <h1 style={{ color: 'white', fontFamily: 'Rokkitt-Regular', textAlign: 'center', marginTop: '20px', letterSpacing: 3 }}>Empowers To Educate</h1>
+                <h1 style={{ color: 'white', fontFamily: 'Rokkitt-Regular', textAlign: 'center', marginTop: '20px', letterSpacing: 3 }}>{t('title.univ.label')}</h1>
                 <div className="d-flex justify-content-center" style={{ height: '350px' }}>
                   <h1 className="align-self-center" style={{ fontWeight: 'bold', color: 'white', fontFamily: 'Rokkitt-Bold', fontSize: '4em' }}>
                     <Typed
@@ -177,7 +177,7 @@ class HomePage extends React.Component {
           <div className="liheBreakCustom"></div>
           <div className="row justify-content-md-center" style={{ margin: '0.01%' }}>
             <div className="col col-12 col-lg-5 colSeparatorHome d-flex justify-content-center flex-column">
-              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"Order of the best polytechnics in Indonesia"</h2>
+              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"{t('quotesLeft.banner.home')}"</h2>
               <br />
               <h5 className="subTitleSeparator align-self-center">Klasterisasi Kemenristekdikti</h5>
             </div>
@@ -187,7 +187,7 @@ class HomePage extends React.Component {
               <div className="vl-three align-self-center"></div>
             </div>
             <div className="col col-12 col-lg-5 colSeparatorHome d-flex justify-content-center flex-column">
-              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"Best of the Best Poliytechnics"</h2>
+              <h2 className="subTitleSeparator align-self-center" style={{ fontWeight: 'bold', fontFamily: 'Rokkitt-Bold' }}>"{t('quotesRight.banner.home')}"</h2>
               <br />
               <h5 className="subTitleSeparator align-self-center">Webometrics</h5>
             </div>
@@ -203,14 +203,14 @@ class HomePage extends React.Component {
                       <MDBCard>
                         <MDBCardImage className="img-fluid" src={imgPeople} />
                         <MDBCardBody>
-                          <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
+                          <MDBCardText>{t('quotesOwner.card.home')}</MDBCardText>
                         </MDBCardBody>
                       </MDBCard>
                     </MDBCol>
                     <br />
                     <h2><b>Bill Gates</b></h2>
                     <p dangerouslySetInnerHTML={
-                      { __html: t('desk.home.paragraph') }
+                      { __html: t('desk.paragraph.home') }
                     } style={{ fontFamily: 'MerriweatherSans-Light' }} />
                   </MDBCol>
                   <MDBCol md="12">
@@ -219,7 +219,7 @@ class HomePage extends React.Component {
                   <MDBCol md="12">
                     <br />
                     <p dangerouslySetInnerHTML={
-                      { __html: t('desk.home.paragraph') }
+                      { __html: t('desk.paragraph.home') }
                     } style={{ fontFamily: 'MerriweatherSans-Light' }} />
                   </MDBCol>
                 </MDBRow>
@@ -240,12 +240,9 @@ class HomePage extends React.Component {
                 </div>
               </MDBCol>
               <MDBCol md='12'>
-                <p style={{ fontFamily: 'MerriweatherSans-Light' }}>
-                  Praesent scelerisque ac lorem gravida volutpat. Donec maximus commodo dolor at sagittis. Etiam eget tortor euismod, ornare arcu quis, malesuada metus.
-                  Proin nunc libero, scelerisque at est ac, accumsan convallis nisi. Nam nec nisl nisl. Integer dolor risus, eleifend sit amet pretium sit amet, fringilla non lectus. Aliquam
-                  finibus tristique egestas. Sed efficitur sem vitae bibendum malesuada. Pellentesque sit amet dignissim orci. Cras a odio sit amet elit accumsan rutrum ut in risus.
-                  Fusce ullamcorper purus et convallis dapibus. Duis quis ultrices lectus.
-                </p>
+              <p dangerouslySetInnerHTML={
+                      { __html: t('desk.paragraph2.home') }
+                    } style={{ fontFamily: 'MerriweatherSans-Light' }} />
               </MDBCol>
               <MDBCol md='12' className="mt-5">
                 <h3>Bill Gates</h3>
@@ -253,10 +250,10 @@ class HomePage extends React.Component {
               </MDBCol>
               <MDBCol md='12' className="btnGroup mt-5">
                 <div className="btnBottomContent btnYellow">
-                  Discover What's On
+                  {t('discover.btn.label')}
                 </div>
                 <div className="btnBottomContent btnSky">
-                  Take The School Tour
+                  {t('tour.btn.label')}
                 </div>
               </MDBCol>
             </MDBRow>
@@ -266,7 +263,7 @@ class HomePage extends React.Component {
             <div className="mt-4">
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="d-flex flex-row">
-                  <p className="fontTitleRightContentPrim">Related News</p>
+                  <p className="fontTitleRightContentPrim">{t('news.sidecontent.all')}</p>
                   <div className="d-flex justify-content-center">
                   </div>
                 </div>
@@ -282,7 +279,7 @@ class HomePage extends React.Component {
             <div className="mt-4">
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="d-flex flex-row">
-                  <p className="fontTitleRightContentPrim">Upcomming Events</p>
+                  <p className="fontTitleRightContentPrim">{t('upcomming.sidecontent.all')}</p>
                   <div className="d-flex justify-content-center">
                   </div>
                 </div>
@@ -298,7 +295,7 @@ class HomePage extends React.Component {
             <div className="mt-4">
               <MDBAnimation reveal type='fadeInRight'>
                 <div className="d-flex flex-row">
-                  <p className="fontTitleRightContentPrim">What's Next ?</p>
+                  <p className="fontTitleRightContentPrim">{t('what.sidecontent.all')}</p>
                   <div className="d-flex justify-content-center">
                   </div>
                 </div>
