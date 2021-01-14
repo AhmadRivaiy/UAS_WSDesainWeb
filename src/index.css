@@ -421,6 +421,13 @@
 	opacity: 0.9;
 }
 
+.eventRightContent {
+	max-width: 350px;
+	min-height: 250px;
+	opacity: 0.9;
+	background-color: #495057;
+}
+
 .btnYellow {
 	background-color: #F8BC31;
   }

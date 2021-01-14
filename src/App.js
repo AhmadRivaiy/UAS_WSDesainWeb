@@ -65,7 +65,8 @@ class App extends Component {
     if (activePills !== tab) {
       this.setState({
         activeItemPills: tab,
-        sidebarOpen: false
+        sidebarOpen: false,
+        collapseID : ''
       });
     }
   };
@@ -136,7 +137,7 @@ class App extends Component {
                     <MDBNavItem>
                       <MDBNavLink
                         onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/modals'
+                        to='/partners'
                       >
                         <strong>{t('our_partner.nav.label')}</strong>
                       </MDBNavLink>
@@ -144,7 +145,7 @@ class App extends Component {
                     <MDBNavItem>
                       <MDBNavLink
                         onClick={this.closeCollapse('mainNavbarCollapse')}
-                        to='/addons'
+                        to='/account'
                       >
                         <strong>{t('account.nav.label')}</strong>
                       </MDBNavLink>

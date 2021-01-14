@@ -182,13 +182,15 @@ class ContactUsPage extends React.Component {
                                     <div className="d-flex justify-content-center">
                                     </div>
                                 </div>
-                                <div className="rightMenu">
-                                    <div className="overlayRightMenu">
+                                <LinkTo to="/news/new-building-at-this-year-2021-will-usefull-for-practicing-milenial">
+                                    <div className="rightMenu">
+                                        <div className="overlayRightMenu">
                                         <div className="fontTitleRightContent">10 Nov 2020</div>
                                         <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                                        </div>
+                                        <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/building.png" waves alt="" />
                                     </div>
-                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/building.png" waves alt="" />
-                                </div>
+                                </LinkTo>
                             </MDBAnimation>
                         </div>
                         <div className="mt-4">
@@ -203,7 +205,7 @@ class ContactUsPage extends React.Component {
                                         <div className="fontTitleRightContent">10 Nov 2020</div>
                                         <div className="fontSubTitleRightContent">NEW BUILDING</div>
                                     </div>
-                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/color-1.jpg" waves alt="" />
+                                    <div className="eventRightContent"/>
                                 </div>
                             </MDBAnimation>
                         </div>
@@ -232,12 +234,14 @@ class ContactUsPage extends React.Component {
                                 </div>
                             </MDBAnimation>
                             <MDBAnimation reveal type='fadeInRight'>
-                                <div className="rightMenu mt-2">
-                                    <div className="overlayRightMenu">
-                                        <div className="fontSubTitleRightContent">{t('about.sidemenu.sublabel')}</div>
+                                <LinkTo to='/about'>
+                                    <div className="rightMenu mt-2">
+                                        <div className="overlayRightMenu">
+                                            <div className="fontSubTitleRightContent">{t('about.sidemenu.sublabel')}</div>
+                                        </div>
+                                        <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves alt=""  />
                                     </div>
-                                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/identy.png" waves alt="" />
-                                </div>
+                                </LinkTo>
                             </MDBAnimation>
                         </div>
                     </div>

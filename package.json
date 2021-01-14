@@ -1,5 +1,5 @@
 {
-  "name": "your-app",
+  "name": "ws-desain-web-uas",
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
@@ -13,6 +13,7 @@
     "react": "^16.12.0",
     "react-burger-menu": "^3.0.2",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",

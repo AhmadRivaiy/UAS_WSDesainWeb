@@ -267,13 +267,15 @@ class HomePage extends React.Component {
                   <div className="d-flex justify-content-center">
                   </div>
                 </div>
-                <div className="rightMenu">
-                  <div className="overlayRightMenu">
-                    <div className="fontTitleRightContent">10 Nov 2020</div>
-                    <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                <LinkTo to="/news/new-building-at-this-year-2021-will-usefull-for-practicing-milenial">
+                  <div className="rightMenu">
+                    <div className="overlayRightMenu">
+                      <div className="fontTitleRightContent">10 Nov 2020</div>
+                      <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                    </div>
+                    <MDBCardImage className="img-fluid imgRightContent" src="/assets/img/building.png" waves alt="" />
                   </div>
-                  <MDBCardImage className="img-fluid imgRightContent" src={imgBuilding2} waves />
-                </div>
+                </LinkTo>
               </MDBAnimation>
             </div>
             <div className="mt-4">
@@ -288,7 +290,7 @@ class HomePage extends React.Component {
                     <div className="fontTitleRightContent">10 Nov 2020</div>
                     <div className="fontSubTitleRightContent">NEW BUILDING</div>
                   </div>
-                  <MDBCardImage className="img-fluid imgRightContent" src={imgColor1} waves />
+                  <div className="eventRightContent"/>
                 </div>
               </MDBAnimation>
             </div>
