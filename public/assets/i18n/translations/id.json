@@ -6,7 +6,7 @@
     "home.nav.label": "Teras",
     "news.nav.label": "Berita & Acara",
     "profile.nav.label": "Profil",
-    "events.nav.label": "Kegiatan",
+    "events.nav.label": "Acara",
     "gallery.nav.label": "Galeri",
     "academic.nav.label": "Akademik",
     "about.nav.label": "Tentang",
@@ -16,6 +16,7 @@
     "language.nav.label": "Bahasa",
     "account.form.label":"MASUK",
     
+    "events.forth.sidemenu.label": "Acara Yang Akan Datang",
     "news.sidemenu.label": "Berita",
     "academic.sidemenu.label": "Akademik",
     "about.sidemenu.label": "Tentang",

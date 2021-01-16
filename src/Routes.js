@@ -6,10 +6,12 @@ import { history } from './helpers';
 import HomePage from './pages/home/HomePage';
 import AboutPage from './pages/about_us/AboutPage';
 import NewsPage from './pages/events/NewsPage';
+import EventsPage from './pages/events/UpcomingEvents';
 import AcademicPage from './pages/academic/AcademicPage';
 import ContactPage from './pages/contact/ContactUsPage';
 
 import ContentNews from './pages/events/v_sub_news/ExampleNews';
+import ContentEvents from './pages/events/v_sub_event/ExampleEvents';
 
 import LoginPage from './pages/account/LoginPage';
 import RegisterPage from './pages/account/RegisterPage';
@@ -29,10 +31,13 @@ class Routes extends React.Component {
             <Route exact path='/about' component={AboutPage} />
 
             <Route exact path='/news' component={NewsPage} />
+            <Route exact path='/events/forthcoming-events' component={EventsPage} />
+
             <Route exact path='/academic_faculties' component={AcademicPage} />
             <Route exact path='/contact_us' component={ContactPage} />
 
             <Route path='/news/:urlnews' component={ContentNews} />
+            <Route path='/events/forthcoming-events/:urlevents' component={ContentEvents} />
 
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterPage} />

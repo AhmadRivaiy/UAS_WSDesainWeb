@@ -285,13 +285,15 @@ class HomePage extends React.Component {
                   <div className="d-flex justify-content-center">
                   </div>
                 </div>
-                <div className="rightMenu">
-                  <div className="overlayRightMenu">
-                    <div className="fontTitleRightContent">10 Nov 2020</div>
-                    <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                <LinkTo to='/events/forthcoming-events/wtcsp-course-new-and-aspiring-leaders'>
+                  <div className="rightMenu">
+                    <div className="overlayRightMenu">
+                      <div className="fontTitleRightContent">10 Nov 2020</div>
+                      <div className="fontSubTitleRightContent">NEW BUILDING</div>
+                    </div>
+                    <div className="eventRightContent"/>
                   </div>
-                  <div className="eventRightContent"/>
-                </div>
+                </LinkTo>
               </MDBAnimation>
             </div>
             <div className="mt-4">

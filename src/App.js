@@ -247,11 +247,11 @@ class App extends Component {
                         </Link>
                       </li>
                       <li>
-                        <a href='#!' className="white-text">
+                        <Link className="white-text" to='/events/forthcoming-events' onClick={this.togglePills('3')}>
                           <div className="subListMenu">
-                            Link 2
+                            {t('events.nav.label')}
                           </div>
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a href='#!' className="white-text">

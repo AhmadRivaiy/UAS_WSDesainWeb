@@ -1,14 +1,14 @@
 
-header {
+.headerCustom {
     position: relative;
     background-color: black;
-    height: 100vh;
+    height: 65vh;
     min-height: 100%;
     width: 100%;
     overflow: hidden;
 }
   
-header .customImg {
+.headerCustom .customImg {
     position: absolute;
     top: 52%;
     left: 50%;
@@ -23,14 +23,14 @@ header .customImg {
     transform: translateX(-50%) translateY(-50%);
 }
   
-header .contents {
+.headerCustom .contents {
     position: relative;
     min-height: 100%;
     width: 100%;
     z-index: 2;
 }
   
-header .overlay {
+.headerCustom .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -88,13 +88,6 @@ ul.breadcrumb li a:hover {
     font-weight: bold;
     font-family: 'Rokkitt-Bold';
     font-size: 4rem;
-}
-
-.titleEventsContent {
-    font-weight: bold;
-    color:#3c3838;
-    font-family: 'Rokkitt-Bold';
-    font-size: 2rem;
 }
 
 .textContent {
